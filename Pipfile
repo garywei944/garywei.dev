@@ -1,0 +1,19 @@
+[[source]]
+#url = "https://pypi.org/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"  # Tsinghua source
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = "*"
+django = "~=4.0.5"
+django-environ = "*"
+whitenoise = "*"
+#pytz = "*"
+# Deployment
+django-heroku = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
