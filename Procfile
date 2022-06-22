@@ -1,1 +1,1 @@
-web: gunicorn noteaid.wsgi
+web: gunicorn garywei_dev.wsgi
