@@ -1,1 +1,454 @@
-{{ define "main" }} {{ .Content }} {{ end }}
+{{ define "main" }}
+<div
+  class="cover-v1 jarallax"
+  id="home-section"
+  style="background-image: url('{{ site.Data.index.background | relURL }}')"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7 mx-auto text-center">
+        <h1 class="heading gsap-reveal-hero">Gary Wei</h1>
+        <h2 class="subheading gsap-reveal-hero">
+          {{ .Site.Data.index.slogan }}
+        </h2>
+      </div>
+    </div>
+  </div>
+  <a class="mouse-wrap smoothscroll" href="#about-section">
+    <span class="mouse"> <span class="scroll"> </span> </span>
+    <span class="mouse-label"> Scroll </span>
+  </a>
+</div>
+<!-- END .cover-v1 -->
+
+<!-- About -->
+<div class="unslate_co--section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> Academic Profile </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row mt-5 justify-content-between">
+      <div class="col-12 mb-lg-0">
+        <h3 class="mb-4 heading-h3">
+          <span class="gsap-reveal">
+            Checkout
+            <a href="https://acad.garywei.dev/"> acad.garywei.dev </a>
+            for my academic profile!
+          </span>
+        </h3>
+        <a href="https://acad.garywei.dev/">
+          <figure class="dotted-bg gsap-reveal-img">
+            <img
+              alt="Academic Profile"
+              class="img-fluid"
+              src="/images/academic_profile.png"
+            />
+          </figure>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<div class="unslate_co--section" id="about-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> About Me </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row mt-5 justify-content-between">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <figure class="dotted-bg gsap-reveal-img">
+          <img
+            alt="Gary Wei"
+            class="img-fluid"
+            src="/images/about_me_pic.jpg"
+          />
+        </figure>
+      </div>
+      <div class="col-lg-7 pr-lg-5">
+        <h3 class="mb-4 heading-h3">
+          <span class="gsap-reveal"> Guanghao (Gary) Wei </span>
+        </h3>
+        {{ partial "body/bio.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Logo -->
+<div class="unslate_co--section">
+  <div class="container">
+    <div class="owl-carousel logo-slider">
+      {{ range .Site.Data.index.logos }}
+      <div class="logo-v1 gsap-reveal">
+        <a href="{{ .link }}">
+          <img
+            alt="{{ .name }} Logo"
+            class="img-fluid"
+            src="{{ .img | relURL }}"
+          />
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<!-- Projects -->
+<div class="unslate_co--section" id="portfolio-section">
+  <div class="container">
+    <div class="relative">
+      <div class="loader-portfolio-wrap">
+        <div class="loader-portfolio"></div>
+      </div>
+    </div>
+    <div id="portfolio-single-holder"></div>
+    <div class="portfolio-wrapper">
+      <div
+        class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter"
+      >
+        <h2 class="mr-auto heading-h2">
+          <span class="gsap-reveal"> Projects </span>
+        </h2>
+        <a class="text-white js-filter d-inline-block d-lg-none" href="#">
+          Filter
+        </a>
+        <div class="filter-wrap">
+          <div class="filter ml-auto" id="filters">
+            <a class="active" data-filter="*" href="#"> All </a>
+            <a data-filter=".ai" href="#"> AI </a>
+            <a data-filter=".os" href="#"> OS </a>
+            <a data-filter=".web" href="#"> Web </a>
+            <a data-filter=".iot" href="#"> IoT </a>
+            <a data-filter=".game" href="#"> Game </a>
+            <a data-filter=".other" href="#"> Other </a>
+          </div>
+        </div>
+      </div>
+      <div class="row gutter-isotope-item" id="posts">
+        {{ range .Site.Data.index.projects }}
+        <div
+          class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2"
+        >
+          <a
+            class="portfolio-item isotope-item gsap-reveal-img"
+            data-id="<%= i %>"
+            href="{{ .link }}"
+          >
+            <div class="overlay">
+              <span class="wrap-icon icon-link2"> </span>
+              <div class="portfolio-item-content">
+                <h3>{{ .title }}</h3>
+                <p>{{ .note }}</p>
+              </div>
+            </div>
+            <img
+              alt="Image"
+              class="lazyload img-fluid"
+              src="{{ .img | relURL }}"
+            />
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="unslate_co--section" id="blog-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal">My Blogs</span>
+      </h2>
+      <span class="gsap-reveal"
+        ><img src="/images/divider.png" alt="divider" width="76"
+      /></span>
+    </div>
+
+    <div class="row gutter-v4 align-items-stretch">
+      <% for (let i in blogs) { %>
+      <div
+        class="col-sm-6 col-md-6 <%= blogs[i].class %> blog-post-entry"
+        data-aos="fade-up"
+        data-aos-delay="0"
+      >
+        <a href="<%= blogs[i].link %>" class="grid-item blog-item w-100 h-100">
+          <div class="overlay">
+            <div class="portfolio-item-content">
+              <h3><%= blogs[i].title %></h3>
+              <p class="post-meta">
+                <%= blogs[i].note1 %> <span class="small">&bullet;</span><%=
+                blogs[i].note2 %>
+              </p>
+            </div>
+          </div>
+          <img src="<%= blogs[i].img %>" class="lazyload" alt="Blog Subshell" />
+        </a>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<!-- END blog posts -->
+<!-- Education -->
+<div class="unslate_co--section" id="education-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> Education </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row gutter-v3">
+      <% for (let i in education) { %>
+      <div class="col-md-6 col-lg-4 mb-4" id="<%- education[i].id %>">
+        <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+          <div class="wrap-icon mb-3">
+            <img alt="Image" src="<%- education[i].img %>" width="45" />
+          </div>
+          <h3><%- education[i].name %></h3>
+          <br />
+          <p><%- education[i].time %></p>
+          <%- include(appRoot+'/views/pages/education/'+education[i].note) %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<!-- Awards -->
+<div class="unslate_co--section" id="award-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> Competitions & Awards </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row gutter-v3">
+      <% for (let i in awards) { %>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+          <div class="wrap-icon mb-3">
+            <img alt="Image" src="<%= awards[i].img %>" width="45" />
+          </div>
+          <h3><%- awards[i].title %></h3>
+          <br />
+          <p><%- awards[i].date %></p>
+          <%- include(appRoot+'/views/pages/awards/'+awards[i].content) %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<!-- END Awards -->
+<!-- Experience -->
+<!--        <div class="unslate_co--section" id="experience-section"> -->
+<!--            <div class="container"> -->
+<!--                <div class="section-heading-wrap text-center mb-5"> -->
+<!--                    <h2 class="heading-h2 text-center divider"><span class="gsap-reveal"> Experience </span></h2> <span -->
+<!--                            class="gsap-reveal"><img src="/images/divider.png" alt="divider" width="76"></span> -->
+<!--                </div> -->
+<!--            </div> -->
+<!--            <div class="owl-carousel testimonial-slider" data-aos="fade-up"> -->
+<!--                <% for (let i in experience) { %> -->
+<!--                    <div> -->
+<!--                        <div class="testimonial-v1"> -->
+<!--                            <div class="testimonial-inner-bg"><span class="quote">&ldquo;</span> -->
+<!--                                <blockquote><%- include(appRoot+'/views/pages/experience/'+experience[i].content) %></blockquote> -->
+<!--                            </div> -->
+<!--                            <div class="testimonial-author-info"><img src="<%= experience[i].img %>" alt="Image"> -->
+<!--                                <h3><%- experience[i].title %></h3> <span -->
+<!--                                        class="d-block position"><%- experience[i].subtitle %></span> -->
+<!--                            </div> -->
+<!--                        </div> -->
+<!--                    </div> -->
+<!--                <% } %> -->
+<!--            </div> -->
+<!--        </div> -->
+<div class="unslate_co--section" id="experience-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> Experience </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row gutter-v3">
+      <% for(let i in experience) { %>
+      <div id="<%- experience[i].id %>" class="col-md-6 col-lg-6 mb-4">
+        <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+          <div class="wrap-icon mb-3">
+            <img alt="Image" src="<%= experience[i].img %>" width="45" />
+          </div>
+          <h3><%- experience[i].name %></h3>
+          <br />
+
+          <h5><%- experience[i].title %></h5>
+          <br />
+          <h6><%- experience[i].time %></h6>
+          <br />
+
+          <%- include(appRoot+'/views/pages/experience/'+experience[i].content)
+          %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<!-- END Experience -->
+<!-- Skills -->
+<div class="unslate_co--section" id="skills-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> My Skills </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row gutter-v3">
+      <% for(let i in skills) { %>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+          <div class="wrap-icon mb-3">
+            <img alt="Image" src="<%= skills[i].svg %>" width="45" />
+          </div>
+          <h3><%- skills[i].title %></h3>
+          <br />
+          <%- include(appRoot+'/views/pages/skills/'+skills[i].content) %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<div class="unslate_co--section" id="contact-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> Get In Touch </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+
+    <div class="row justify-content-between">
+      <div class="col-md-8">
+        <form
+          method="post"
+          action="https://formspree.io/f/mknygbqk"
+          class="form-outline-style-v1"
+          id="contactForm"
+        >
+          <div class="form-group row mb-0">
+            <div class="col-lg-6 form-group gsap-reveal">
+              <label for="name">Name</label>
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="name"
+                autocomplete="name"
+              />
+            </div>
+            <div class="col-lg-6 form-group gsap-reveal">
+              <label for="email">Email</label>
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="email"
+                autocomplete="email"
+              />
+            </div>
+            <div class="col-lg-12 form-group gsap-reveal">
+              <label for="message">
+                <!--                                        Write your message...-->
+                The message will be submitted via formspree.io
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="7"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group row gsap-reveal">
+            <div class="col-md-12 d-flex align-items-center">
+              <input
+                type="submit"
+                class="btn btn-outline-pill btn-custom-light mr-3"
+                value="Send Message"
+              />
+              <span class="submitting"></span>
+            </div>
+          </div>
+        </form>
+        <div id="form-message-warning" class="mt-4"></div>
+        <div id="form-message-success">Your message was sent, thank you!</div>
+      </div>
+
+      <!--                    <div class="col-md-8">-->
+      <!--                        <figure class="">-->
+      <!--                            <img alt="Gary Wei" class="img-fluid" src"/images/contact_bg.jpg"/>-->
+      <!--                        </figure>-->
+      <!--                    </div>-->
+      <div class="col-md-4">
+        <div class="contact-info-v1">
+          <div class="gsap-reveal d-block">
+            <span class="d-block contact-info-label"> Email </span>
+            <a class="contact-info-val" href="mailto:garywei944@gmail.com">
+              garywei944@gmail.com
+            </a>
+            <br />
+            <a class="contact-info-val" href="mailto:gw338@cornell.edu">
+              gw338@cornell.edu
+            </a>
+            <br />
+            <a class="contact-info-val" href="mailto:garywei944@163.com">
+              garywei944@163.com
+            </a>
+          </div>
+          <!--                            <div class="gsap-reveal d-block">-->
+          <!--                                <span class="d-block contact-info-label">Phone</span>-->
+          <!--                                <a href="#" class="contact-info-val">+1</a>-->
+          <!--                            </div>-->
+          <!--                            <div class="gsap-reveal d-block">-->
+          <!--                                <span class="d-block contact-info-label">Address</span>-->
+          <!--                                <address class="contact-info-val">273 South Riverview Rd. <br> New York, NY 10011-->
+          <!--                                </address>-->
+          <!--                            </div>-->
+          <div class="gsap-reveal d-block">
+            <%- include(appRoot+'/views/partials/profiles') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

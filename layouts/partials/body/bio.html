@@ -1,0 +1,13 @@
+{{ range .Site.Data.index.biography }}
+<p class="lead gsap-reveal">{{ . | markdownify }}</p>
+{{ end }}
+
+<p class="lead gsap-reveal">
+  <a
+    class="btn btn-outline-pill btn-custom-light"
+    href="{{ .Site.Params.resume }}"
+    target="_blank"
+  >
+    Download Resume
+  </a>
+</p>

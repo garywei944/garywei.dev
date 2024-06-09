@@ -5,4 +5,7 @@ title = "Gary Wei's Website"
 [params]
 author = "Gary Wei"
 logo = "/images/logo.png"
-datePublished = 2021-05-15T12:00:00Z
+datePublished = 2021-05-15T00:00:00Z
+dateModified = 2024-06-08T00:00:00Z
+
+resume = "https://s3.amazonaws.com/garywei.dev/Guanghao_Wei_Resume.pdf"

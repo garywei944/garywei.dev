@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{ partial "head/prerender.html" . }} {{ partial "head/metadata.html" . }} {{ partial "head/gtag.html" . }}
+    {{ partial "head/prerender.html" . }} {{ partial "head/metadata.html" . }}
+    {{ partial "head/gtag.html" . }}
     <title>{{ .Title }}</title>
   </head>
-  <body>
-    {{ block "main" . }}{{ end }} {{ partial "footer/site-footer.html" . }} {{ partial "footer/scripts.html" . }}
+  <body data-offset="200" data-spy="scroll" data-target=".site-nav-target">
+    <nav class="unslate_co--site-mobile-menu">
+      <div class="close-wrap d-flex">
+        <a class="d-flex ml-auto js-menu-toggle" href="#">
+          <span class="close-label"> Close </span>
+          <div class="close-times">
+            <span class="bar1"> </span>
+            <span class="bar2"> </span>
+          </div>
+        </a>
+      </div>
+      <div class="site-mobile-inner"></div>
+    </nav>
+
+    <div class="unslate_co--site-wrap">
+      <div class="unslate_co--site-inner">
+        {{ partial "header/site-nav.html" . }} {{ block "main" . }}{{ end }}
+      </div>
+      {{ partial "footer/site-footer.html" . }}
+    </div>
+    {{ partial "footer/scripts.html" . }}
   </body>
 </html>
