@@ -1,0 +1,9 @@
+baseURL = 'https://www.garywei.dev/'
+languageCode = 'en-us'
+title = "Gary Wei's Website"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+

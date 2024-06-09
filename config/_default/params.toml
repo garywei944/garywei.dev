@@ -1,10 +1,5 @@
-baseURL = 'https://www.garywei.dev/'
-languageCode = 'en-us'
-title = "Gary Wei's Website"
-
-[params]
 author = "Gary Wei"
-logo = "/images/logo.png"
+logo = ""
 datePublished = 2021-05-15T00:00:00Z
 dateModified = 2024-06-08T00:00:00Z
 
