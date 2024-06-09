@@ -1,0 +1,293 @@
+background: "/images/wlop/wlop (6)_wm.jpg"
+slogan: "Researcher | Engineer | Hacker | Gamer"
+
+logos:
+  - name: "Cornell"
+    img: "/images/logo_cornell_c.png"
+    link: "#education-cornell"
+  - name: "Cornell CSSA"
+    img: "/images/logo_cornell_cssa.png"
+    link: "#experience-cornell-cssa"
+  - name: "UMass Amherst"
+    img: "/images/logo_umass.png"
+    link: "#education-umass"
+  - name: "UMass CSSA"
+    img: "/images/logo_umass_cssa.png"
+    link: "#experience-umass-cssa"
+  - name: "BHSF"
+    img: "/images/logo_bhsf.png"
+    link: "#education-bhsf"
+
+projects:
+  - class: "ai"
+    link: "https://acad.garywei.dev#projects"
+    title: "Academic projects"
+    note: "acad.garywei.dev"
+    img: "/images/projects/acad_projects.jpg"
+  - class: "ai"
+    link: "https://github.com/garywei944/grab-sampler"
+    title: "GraB Sampler"
+    note: "PyPI, Machine Learning - Feb 2023"
+    img: "/images/projects/project_grab_sampler.jpg"
+  - class: "os"
+    link: "https://github.com/garywei944/eva_init"
+    title: "One Key Init for Ubuntu"
+    note: "OS, Linux, Bash - Since Jan 2020"
+    img: "/images/projects/project_eva_init.jpg"
+  - class: "os col-lg-8"
+    link: "https://github.com/garywei944/eva_arch"
+    title: "Arch Linux Configurations"
+    note: "OS, Linux - Since Jan 2020"
+    img: "/images/projects/arch_neofetch_v3.jpg"
+
+  - class: "web"
+    link: "https://github.com/garywei944/CG3-Blog-Platform"
+    title: "CG3 Blog Platform"
+    note: "Web, Full Stack - May 2021"
+    img: "/images/projects/project_cg3.jpg"
+  - class: "web ai"
+    link: "https://github.com/garywei944/Reconnect-Unihack21_Devil_Otter"
+    title: "Reconnect System"
+    note: "Web, AI - Aug 2021"
+    img: "/images/projects/project_unihack21_reconnect.jpg"
+  # - class: "web"
+  #   link: "https://github.com/cicscareers/320-S20-Track1"
+  #   title: "ReachOUT"
+  #   note: "Web, AWS - May 2020"
+  #   img: "/images/projects/project_reachout.jpg"
+
+  # - class: "iot"
+  #   link: "https://www.youtube.com/watch?v=_SQXAUgm1m4"
+  #   title: "Small Wifi System"
+  #   note: "IoT - Apr 2020"
+  #   img: "/images/projects/project_iot_wifi.jpg"
+  # - class: "iot"
+  #   link: "https://www.youtube.com/watch?v=mOR20ydotqU"
+  #   title: "Room Security System"
+  #   note: "IoT - Apr 2020"
+  #   img: "/images/projects/project_iot_security.jpg"
+
+  - class: "game"
+    link: "/projects/cs590g_p1"
+    title: "My First Game - Astronaut"
+    note: "Game, Unity - Sep 2020"
+    img: "/images/projects/project_astronaut.jpg"
+  # - class: "game"
+  #   link: "/projects/cs590g_final_project"
+  #   title: "Untitled Tower Defense"
+  #   note: "Game, Unity - Dec 2020"
+  #   img: "/images/projects/project_untitled_tower_defense.jpg"
+  # - class: "game"
+  #   link: "/projects/cs590g_p5"
+  #   title: "Randomly Generated Maze"
+  #   note: "Game, Unity - Nov 2020"
+  #   img: "/images/projects/project_randomly_generated_maze.jpg"
+  # - class: "game"
+  #   link: "/projects/cs590g_p3"
+  #   title: "Action Game - Claire Adventure"
+  #   note: "Game, Unity - Oct 2020"
+  #   img: "/images/projects/project_claire_adventure.jpg"
+
+  # - class: "other col-lg-6"
+  #   link: "https://github.com/garywei944/icloud_vcf_contacts_to_google_csv_format"
+  #   title: "cvf_to_csv"
+  #   note: "Other, python - Feb 2020"
+  #   img: "https://github-readme-stats.vercel.app/api/pin/?username=garywei944&repo=icloud_vcf_contacts_to_google_csv_format&theme=light"
+  - class: "other"
+    link: "https://github.com/garywei944/python-cd2root"
+    title: "cd2root"
+    note: "PyPI - Oct 2023"
+    img: "/images/projects/project_cd2root.jpg"
+
+blogs:
+  - class: "col-lg-6"
+    link: "https://github.com/garywei944/umass_ctf_2022/tree/main/pwn/zip_parser"
+    title: "Writeup for UMassCTF 2022 - zip_parser"
+    note1: "CTF Writeup"
+    note2: "pwn"
+    img: "/images/blogs/umass_ctf_zip_parser.jpg"
+  - class: "col-lg-6"
+    link: "https://github.com/garywei944/umass_ctf_2022/tree/main/crypto/hatmash"
+    title: "Writeup for UMassCTF 2022 - hatmash"
+    note1: "CTF Writeup"
+    note2: "crypto"
+    img: "/images/blogs/umass_ctf_hatmash.jpg"
+  - class: "col-lg-6"
+    link: "https://blog.csdn.net/garywei944/article/details/114367381"
+    title: "简单理解Bash中子进程 (child process)和子shell (subshell)的区别以及SHLVL和BASH_SUBSHELL"
+    note1: "CSDN"
+    note2: "OS, Linux, Bash"
+    # img: "/images/wlop/6_wm.jpg"
+    img: "https://picsum.photos/1280/720?blur"
+
+education:
+  - id: "education-cornell"
+    img: "/images/avatar_cornell_c.png"
+    name: "Cornell University"
+    title: "M.Eng. in Computer Science, 2023"
+    note: |
+      I worked at [**Cornell Relax ML Lab**](https://relax-ml.cs.cornell.edu/) on
+      Machine Learning Systems projects advised by Prof. 
+      [**Chris De Sa**](https://www.cs.cornell.edu/~cdesa/).
+
+      A Biography refers to [**acad.garywei.dev**](https://acad.garywei.dev#about).
+  - id: "education-umass"
+    img: "/images/avatar_umass.png"
+    name: "University of Massachusetts Amherst"
+    title: |
+      B.S. in Computer Science, 2022  
+      B.S. in Mathematics, 2022  
+      Minor in Japanese
+  - id: "education-bhsf"
+    img: "/images/avatar_bhsf.png"
+    name: "Beijing No.4 High School"
+    title: "High School Diploma, 2018"
+    note: |
+      I have the honor of graduating from one of the best high school in China 
+      -- Beijing No.4 High School.
+
+      The memories I cherished most were being a player on school's soccer team.
+# awards:
+#   - img: "/images/avatar_umass_ctf.jpg"
+#     title: "CTF: UMassCTF 2022"
+#     date: "Apr 2022"
+#     content: "umass_ctf_22"
+#   - img: "/images/avatar_usc_cssa.jpg"
+#     title: "Hackathon: Unihack '21"
+#     date: "Aug 2021"
+#     content: "unihack21"
+#   - img: "/images/avatar_mcm.jpg"
+#     title: "MCM: The Mathematical Contest in Modeling"
+#     date: "Feb 2021"
+#     content: "mcm"
+#   - img: "/images/avatar_usc_cssa.jpg"
+#     title: "Hackathon: UNICODE SC+"
+#     date: "Sep 2020"
+#     content: "unicode-sc"
+#   - img: "/images/avatar_umass.png"
+#     title: "Jacob-Cohen-Killam Mathematics Competition"
+#     date: "Apr 2019 & 2020"
+#     content: "jck"
+#   - img: "/images/avatar_datafest.png"
+#     title: "ASA Five College DataFest"
+#     date: "Mar 2019"
+#     content: "datafest"
+#   - img: "/images/avatar_noi.png"
+#     title: "National Olympiad in Informatics in Provinces"
+#     date: "Nov 2016"
+#     content: "noip"
+
+experience:
+  - id: "experience-relax-ml"
+    img: "/images/avatar_cornell.png"
+    name: "Cornell Relax ML Lab"
+    title: "Research Assistant"
+    time: "2022 - 2024"
+    note: |
+      I worked at [**Cornell Relax ML Lab**](https://relax-ml.cs.cornell.edu/)
+      with Prof. [**Chris De Sa**](https://www.cs.cornell.edu/~cdesa/) on
+      efficient Machine Learning algorithms and systems.
+
+      Our work, grounded in mathematical principles, aims to expedite
+      large-scale, high-performance machine learning systems that are efficient,
+      parallel, and distributed in real-world settings.
+  - id: "experience-cornell-cssa"
+    img: "/images/avatar_cornell_cssa.png"
+    name: "Cornell CSSA"
+    title: "Secretary General"
+    time: "2022 - 2024"
+    note: |
+      Cornell Chinese Students and Scholars Association.
+      Joining Cornell CSSA is the most precious experience of my student life.
+
+      Together we organized the Cornell Spring Festival Gala, Mid-Autumn
+      Festival carnival and many other activities.
+  - id: "experience-cornell-cdsc"
+    img: "/images/avatar_cornell_big_red.png"
+    name: "Cornell CDSC"
+    title: "Soccer Player"
+    time: "2022 - 2023"
+    note: |
+      Cornell Chinese Dragon Soccer Club.
+
+      I represented Cornell CDSC as a first-team player in the ivy league and
+      other competitions.
+  - img: "/images/avatar_umass_badge.png"
+    name: "UMass BioNLP Lab"
+    title: "Research Assistant"
+    time: "May 2021 - June 2022"
+    note: |
+      I worked at [**UMass BioNLP Lab**](https://bio-nlp.org/) on practical
+      biomedical NLP projects directed by Prof.
+      [**Hong Yu**](https://www.uml.edu/sciences/computer-science/faculty/yu-hong.aspx).
+
+      My responsibilities include: Information Retrieval, Data Processing,
+      Model Implementation, Performance Analysis, and Application Product
+      Implementation.
+  - id: "experience-umass-cssa"
+    img: "/images/avatar_cssa.png"
+    name: "UMass Amherst CSSA"
+    title: "Member"
+    time: "2018 - 2022"
+    note: |
+      I have been a member of the Personnel Department of UMass Amherst CSSA
+      since the fall of 2018.
+
+      We hold several events such as Spring Festival Gala, Mid-Autumn Festival
+      Barbecue, and Campus Singer Competition every year.
+      I'm one of the organizers of all these events.
+skills:
+  - svg: "/images/svg/001-options.svg"
+    title: "Machine Learning Engineer"
+    note: |
+      *Conda Expert (just kidding)*
+
+      I develop and contribute to open-source machine leanring projects.
+
+      I'm proficient in mainstream machine learning frameworks and CUDA programming.
+  - svg: "/images/svg/002-chat.svg"
+    title: "Full Stack & AWS Cloud"
+    note: |
+      I started to develop full stack websites using node.js(express), Django
+      and work with AWS serverless services since 2019.
+      I design full stack web-application architectures.
+
+      This website is currently generated by Hugo, deployed on AWS serverless
+      services, and the workflow is managed by GitHub Actions.
+  - svg: "/images/svg/003-contact-book.svg"
+    title: "All Platform Development"
+    note: |
+      **Proud Arch Linux User** since 2020.
+
+      I also work on Windows 11, macOS, and Ubuntu 24.04, and
+      proficient with docker and VM solutions.
+
+      I wrote scripts for daily use and published them on GitHub.
+      [**eva_arch**](https://github.com/garywei944/eva_arch)(Arch Linux),
+      [**eva_init**](https://github.com/garywei944/eva_init)(Ubuntu),
+      [**eva_ubuntu**](https://github.com/garywei944/eva_ubuntu)(Ubuntu), and
+      [**eva_windows**](https://github.com/garywei944/eva_windows)(Windows).
+  - svg: "/images/svg/004-percentage.svg"
+    title: "ML & AI Researcher"
+    note: |
+      My research interest lie at the intersection of efficient Machine Learning
+      Systems, High Performance Computing, and AI for Science
+
+      Checkout my recent publications and research at
+      [**academic projects**](https://acad.garywei.dev#projects) for more details.
+  - svg: "/images/svg/006-goal.svg"
+    title: "Game Programming - Unity"
+    note: |
+      I have taken Game Programming course (UMass CS 576) and learned to develop
+      game in Unity.
+
+      I play League, AAA, and plenty of other games, these masterpieces ignited
+      my passion for being a Game Developer.
+  - svg: "/images/svg/005-line-chart.svg"
+    title: "Cybersecurity"
+    note: |
+      I took the security class (CS 390R) titled Reverse Engineering and
+      Vulnerability Analysis at UMass Amherst and acquired intro level
+      skills for vulnerability analysis and exploiting binary executable programs.
+
+      I enjoyed the time solving CTF challenges.

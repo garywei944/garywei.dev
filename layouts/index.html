@@ -21,7 +21,7 @@
 </div>
 <!-- END .cover-v1 -->
 
-<!-- About -->
+<!-- acad.garywei.dev -->
 <div class="unslate_co--section">
   <div class="container">
     <div class="section-heading-wrap text-center mb-5">
@@ -67,16 +67,12 @@
       </span>
     </div>
     <div class="row mt-5 justify-content-between">
-      <div class="col-lg-4 mb-5 mb-lg-0">
+      <div class="col-lg-6 mb-5 mb-lg-0">
         <figure class="dotted-bg gsap-reveal-img">
-          <img
-            alt="Gary Wei"
-            class="img-fluid"
-            src="/images/about_me_pic.jpg"
-          />
+          <img alt="Gary Wei" class="img-fluid" src="/images/avatar.jpg" />
         </figure>
       </div>
-      <div class="col-lg-7 pr-lg-5">
+      <div class="col-lg-5 pr-lg-5">
         <h3 class="mb-4 heading-h3">
           <span class="gsap-reveal"> Guanghao (Gary) Wei </span>
         </h3>
@@ -128,7 +124,7 @@
             <a data-filter=".ai" href="#"> AI </a>
             <a data-filter=".os" href="#"> OS </a>
             <a data-filter=".web" href="#"> Web </a>
-            <a data-filter=".iot" href="#"> IoT </a>
+            <!-- <a data-filter=".iot" href="#"> IoT </a> -->
             <a data-filter=".game" href="#"> Game </a>
             <a data-filter=".other" href="#"> Other </a>
           </div>
@@ -136,9 +132,7 @@
       </div>
       <div class="row gutter-isotope-item" id="posts">
         {{ range .Site.Data.index.projects }}
-        <div
-          class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2"
-        >
+        <div class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
           <a
             class="portfolio-item isotope-item gsap-reveal-img"
             data-id="<%= i %>"
@@ -176,26 +170,30 @@
     </div>
 
     <div class="row gutter-v4 align-items-stretch">
-      <% for (let i in blogs) { %>
+      {{ range $i, $e := .Site.Data.index.blogs }}
       <div
-        class="col-sm-6 col-md-6 <%= blogs[i].class %> blog-post-entry"
+        class="col-sm-6 col-md-6 {{ .class }} blog-post-entry"
         data-aos="fade-up"
         data-aos-delay="0"
       >
-        <a href="<%= blogs[i].link %>" class="grid-item blog-item w-100 h-100">
+        <a href="{{ .link }}" class="grid-item blog-item w-100 h-100">
           <div class="overlay">
             <div class="portfolio-item-content">
-              <h3><%= blogs[i].title %></h3>
+              <h3>{{ $e.title }}</h3>
               <p class="post-meta">
-                <%= blogs[i].note1 %> <span class="small">&bullet;</span><%=
-                blogs[i].note2 %>
+                {{ $e.note1 }} <span class="small">&bullet;</span>{{ $e.note2 }}
               </p>
             </div>
           </div>
-          <img src="<%= blogs[i].img %>" class="lazyload" alt="Blog Subshell" />
+          <!-- <img src="{{ .img }}" class="lazyload" alt="Blog Subshell" /> -->
+          <img
+            src="https://picsum.photos/852/480?blur&random={{ $i }}"
+            class="lazyload"
+            alt="Blog Subshell"
+          />
         </a>
       </div>
-      <% } %>
+      {{ end }}
     </div>
   </div>
 </div>
@@ -212,25 +210,28 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      <% for (let i in education) { %>
-      <div class="col-md-6 col-lg-4 mb-4" id="<%- education[i].id %>">
+      {{ range .Site.Data.index.education }}
+      <div class="col-md-6 col-lg-4 mb-4" id="{{ .id }}">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">
-            <img alt="Image" src="<%- education[i].img %>" width="45" />
+            <img alt="Image" src="{{ .img }}" width="45" />
           </div>
-          <h3><%- education[i].name %></h3>
+          <h3>{{ .name }}</h3>
           <br />
-          <p><%- education[i].time %></p>
-          <%- include(appRoot+'/views/pages/education/'+education[i].note) %>
+          {{ .title | markdownify }}
+          <p></p>
+          {{ .note | markdownify }}
         </div>
       </div>
-      <% } %>
+      {{ end }}
+
+      <!-- simply list each education information -->
     </div>
   </div>
 </div>
 
 <!-- Awards -->
-<div class="unslate_co--section" id="award-section">
+<!-- <div class="unslate_co--section" id="award-section">
   <div class="container">
     <div class="section-heading-wrap text-center mb-5">
       <h2 class="heading-h2 text-center divider">
@@ -256,7 +257,7 @@
       <% } %>
     </div>
   </div>
-</div>
+</div> -->
 <!-- END Awards -->
 <!-- Experience -->
 <!--        <div class="unslate_co--section" id="experience-section"> -->
@@ -293,25 +294,24 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      <% for(let i in experience) { %>
-      <div id="<%- experience[i].id %>" class="col-md-6 col-lg-6 mb-4">
+      {{ range .Site.Data.index.experience }}
+      <div id="{{ .id }}" class="col-md-6 col-lg-4 mb-4">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">
-            <img alt="Image" src="<%= experience[i].img %>" width="45" />
+            <img alt="Image" src="{{ .img | relURL }}" width="45" />
           </div>
-          <h3><%- experience[i].name %></h3>
+          <h3>{{ .title }}</h3>
           <br />
 
-          <h5><%- experience[i].title %></h5>
-          <br />
-          <h6><%- experience[i].time %></h6>
-          <br />
-
-          <%- include(appRoot+'/views/pages/experience/'+experience[i].content)
-          %>
+          <h5>{{ .name }}</h5>
+          {{ .time }}
+          <!-- <br /> -->
+          <!-- <h6>{{ .time }}</h6> -->
+          <p></p>
+          {{ .note | markdownify }}
         </div>
       </div>
-      <% } %>
+      {{ end }}
     </div>
   </div>
 </div>
@@ -328,18 +328,18 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      <% for(let i in skills) { %>
+      {{ range .Site.Data.index.skills }}
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">
-            <img alt="Image" src="<%= skills[i].svg %>" width="45" />
+            <img alt="Image" src="{{ .svg | relURL }}" width="45" />
           </div>
-          <h3><%- skills[i].title %></h3>
-          <br />
-          <%- include(appRoot+'/views/pages/skills/'+skills[i].content) %>
+          <h3>{{ .title }}</h3>
+          <p></p>
+          {{ .note | markdownify }}
         </div>
       </div>
-      <% } %>
+      {{ end }}
     </div>
   </div>
 </div>
@@ -429,10 +429,10 @@
             <a class="contact-info-val" href="mailto:gw338@cornell.edu">
               gw338@cornell.edu
             </a>
-            <br />
-            <a class="contact-info-val" href="mailto:garywei944@163.com">
+            <!-- <br /> -->
+            <!-- <a class="contact-info-val" href="mailto:garywei944@163.com">
               garywei944@163.com
-            </a>
+            </a> -->
           </div>
           <!--                            <div class="gsap-reveal d-block">-->
           <!--                                <span class="d-block contact-info-label">Phone</span>-->
@@ -444,7 +444,7 @@
           <!--                                </address>-->
           <!--                            </div>-->
           <div class="gsap-reveal d-block">
-            <%- include(appRoot+'/views/partials/profiles') %>
+            {{ partial "footer/profiles.html" . }}
           </div>
         </div>
       </div>
