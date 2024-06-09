@@ -1,0 +1,30 @@
+<!-- layouts/partials/head/schema.html -->
+{{ $dateModified := .Params.dateModified | default (.Date.Format "2006-01-02") }}
+{{ printf "Variable value: %v" $dateModified }}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "{{ .Params.schemaType | default "WebPage" }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
+    "headline": "{{ .Title }}",
+    "description": "{{ .Description }}",
+    "image": "{{ .Params.ogImage }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Params.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Your Website Name",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://example.com/images/logo.jpg"
+      }
+    },
+    "datePublished": "{{ .Params.datePublished }}",
+    "dateModified": "{{ $dateModified }}"
+  }
+</script>

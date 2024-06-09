@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ .Title }}</title>
+    {{ partial "head/prerender.html" }} {{ partial "head/metadata.html" }}
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }} {{ partial "footer/site-footer.html" . }} {{ partial "footer/scripts.html" . }}
+  </body>
+</html>
