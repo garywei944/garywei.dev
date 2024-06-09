@@ -1,6 +1,6 @@
 <meta name="description" content="{{ .Description }}" />
-<meta name="keywords" content="{{ .Params.keywords }}" />
-<meta name="author" content="{{ .Params.author }}" />
+<meta name="keywords" content="{{ delimit .Keywords ", " }}">
+<meta name="author" content="{{ .Site.Params.Author }}" />
 <meta name="robots" content="index, follow" />
 
 <!-- Open Graph Metadata -->

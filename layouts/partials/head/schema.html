@@ -1,6 +1,4 @@
 <!-- layouts/partials/head/schema.html -->
-{{ $dateModified := .Params.dateModified | default (.Date.Format "2006-01-02") }}
-{{ printf "Variable value: %v" $dateModified }}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -14,17 +12,9 @@
     "image": "{{ .Params.ogImage }}",
     "author": {
       "@type": "Person",
-      "name": "{{ .Params.author }}"
+      "name": "{{ .Site.Params.Author }}"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Your Website Name",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "http://example.com/images/logo.jpg"
-      }
-    },
-    "datePublished": "{{ .Params.datePublished }}",
-    "dateModified": "{{ $dateModified }}"
+    "datePublished": "{{ .Site.Params.DatePublished.Format "2006-01-02" }}",
+    "dateModified": "{{ .Date.Format "2006-01-02" }}"
   }
 </script>

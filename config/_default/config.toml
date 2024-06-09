@@ -1,0 +1,8 @@
+baseURL = 'https://www.garywei.dev/'
+languageCode = 'en-us'
+title = "Gary Wei's Website"
+
+[params]
+author = "Gary Wei"
+logo = "/images/logo.png"
+datePublished = 2021-05-15T12:00:00Z

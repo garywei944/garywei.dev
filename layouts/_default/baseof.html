@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ .Title }}</title>
-    {{ partial "head/prerender.html" }} {{ partial "head/metadata.html" }}
+    {{ partial "head/prerender.html" . }} {{ partial "head/metadata.html" . }} {{ partial "head/gtag.html" . }}
     <title>{{ .Title }}</title>
   </head>
   <body>
