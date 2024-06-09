@@ -1,7 +1,8 @@
 <!-- Google tag (gtag.js) -->
+{{ if not .Site.IsServer }}
 <script
   async
-  src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.services.googleAnalytics }}"
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.Config.Services.GoogleAnalytics.ID }}"
 ></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,5 +11,6 @@
   }
   gtag("js", new Date());
 
-  gtag("config", "{{ .Site.Params.services.googleAnalytics }}");
+  gtag("config", "{{ site.Config.Services.GoogleAnalytics.ID }}");
 </script>
+{{ end }}
