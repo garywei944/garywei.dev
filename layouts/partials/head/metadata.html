@@ -6,7 +6,7 @@
 <!-- Open Graph Metadata -->
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ .Description }}" />
-<meta property="og:image" content="{{ .Params.ogImage }}" />
+<meta property="og:image" content="{{ .Params.ogImage | absURL }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="website" />
 
@@ -14,6 +14,6 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ .Description }}" />
-<meta name="twitter:image" content="{{ .Params.ogImage }}" />
+<meta name="twitter:image" content="{{ .Params.ogImage | absURL }}" />
 
 {{ partial "head/schema.html" . }} {{ partial "head/styles.html" . }}

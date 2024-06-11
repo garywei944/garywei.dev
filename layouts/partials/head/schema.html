@@ -9,7 +9,7 @@
     },
     "headline": "{{ .Title }}",
     "description": "{{ .Description }}",
-    "image": "{{ .Params.ogImage }}",
+    "image": "{{ .Params.ogImage | absURL }}",
     "author": {
       "@type": "Person",
       "name": "{{ .Site.Params.Author }}"
