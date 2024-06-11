@@ -101,13 +101,13 @@ projects:
 
 blogs:
   - class: "col-lg-6"
-    link: "https://github.com/garywei944/umass_ctf_2022/tree/main/pwn/zip_parser"
+    link: "https://acad.garywei.dev/blog/2022/ctf-zip-parser/"
     title: "Writeup for UMassCTF 2022 - zip_parser"
     note1: "CTF Writeup"
     note2: "pwn"
     img: "/images/blogs/umass_ctf_zip_parser.jpg"
   - class: "col-lg-6"
-    link: "https://github.com/garywei944/umass_ctf_2022/tree/main/crypto/hatmash"
+    link: "https://acad.garywei.dev/blog/2022/ctf-hatmash/"
     title: "Writeup for UMassCTF 2022 - hatmash"
     note1: "CTF Writeup"
     note2: "crypto"
