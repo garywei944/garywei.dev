@@ -113,5 +113,18 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 ></script>
-<script src="{{ "js/main.js" | relURL }}"></script>
-<script src="{{ "js/contact-form.js" | relURL }}"></script>
+
+{{ if .Param "math" }} {{ partialCached "head/p/math.html" . }} {{ end }}
+
+{{ $s := slice "js/main.js" }}
+{{ if .Params.js }}
+  {{ $s = $s | append .Params.js | uniq }}
+{{ end }}
+
+{{ range $s }} {{ $r := resources.Get . | minify | fingerprint }}
+<script
+  src="{{ $r.Permalink }}"
+  integrity="{{ $r.Data.Integrity }}"
+  crossorigin="anonymous"
+></script>
+{{ end }}

@@ -1,6 +1,5 @@
+math = false
 author = "Gary Wei"
 
-resume = "https://s3.amazonaws.com/garywei.dev/Guanghao_Wei_Resume.pdf"
-
 [social]
-twitter = "garywei944"
+twitter = "garywei944" # used for twitter cards

@@ -17,7 +17,8 @@ images = [
 
 +++
 
-{{< page-head >}}Project Description{{< /page-head >}}
+Project Description
+{.detail-label}
 
 The player should reach a "finish zone" by controlling a character.
 
@@ -25,10 +26,13 @@ There is no win or loss condition in this game, only a completed condition (the 
 
 *Made with Unity.*
 
-{{< page-head >}}Project Date{{< /page-head >}}
+Project Date
+{.detail-label}
+
 Sep 7th, 2020
 
-{{< page-head >}} Instructions {{< /page-head >}}
+Instructions
+{.detail-label}
 
 {{< deeppink >}}"W"{{< /deeppink >}} and
 {{< deeppink >}}"S"{{< /deeppink >}} to go forward or back  
@@ -36,7 +40,8 @@ Sep 7th, 2020
 {{< deeppink >}}"D"{{< /deeppink >}} to turn around  
 {{< deeppink >}}"Space"{{< /deeppink >}} to jump
 
-{{< page-head >}} Download {{< /page-head >}}
+Download
+{.detail-label}
 
 <a href="https://s3.amazonaws.com/ariseus.net/cs590g_p1/aris_cs590g_p1_1.1.0_win_x86_64.zip">
 <input

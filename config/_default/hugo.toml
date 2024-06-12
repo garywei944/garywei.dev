@@ -2,10 +2,41 @@ baseURL = 'https://www.garywei.dev/'
 languageCode = 'en-us'
 title = "Gary Wei's Website"
 
+copyright = ""
+enableEmoji = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+timeZone = "US/Eastern"
+
 [markup]
 [markup.goldmark]
+[markup.goldmark.extensions]
+# Enable Extra Features
+[markup.goldmark.extensions.extras]
+[markup.goldmark.extensions.extras.insert]
+enable = true
+[markup.goldmark.extensions.extras.mark]
+enable = true
+[markup.goldmark.extensions.extras.subscript]
+enable = true
+[markup.goldmark.extensions.extras.superscript]
+enable = true
+# # Enable Mathemetical Equations
+# [markup.goldmark.extensions.passthrough]
+# enable = true
+# [markup.goldmark.extensions.passthrough.delimiters]
+# block = [['\[', '\]'], ['$$', '$$']]
+# inline = [['\(', '\)']]
+# attribute parser for block
+[markup.goldmark.parser.attribute]
+block = true
+# Enable render HTML in markdown
 [markup.goldmark.renderer]
 unsafe = true
 
-[taxonomies]
-  tag = 'tags'
+
+[module]
+[module.hugoVersion]
+extended = false
+max = ''
+min = '0.126.0'

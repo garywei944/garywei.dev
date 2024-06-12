@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div
   class="cover-v1 gradient-bottom-black jarallax"
-  style="background-image: url('{{ .Params.background | absURL }}')"
+  style="background-image: url('{{ .Params.background | relURL }}')"
 >
   <div class="container">
     <div class="row align-items-center">

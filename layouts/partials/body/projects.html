@@ -1,0 +1,58 @@
+<!-- Projects -->
+<div class="unslate_co--section" id="portfolio-section">
+  <div class="container">
+    <div class="relative">
+      <div class="loader-portfolio-wrap">
+        <div class="loader-portfolio"></div>
+      </div>
+    </div>
+    <div id="portfolio-single-holder"></div>
+    <div class="portfolio-wrapper">
+      <div
+        class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter"
+      >
+        <h2 class="mr-auto heading-h2">
+          <span class="gsap-reveal"> Projects </span>
+        </h2>
+        <a class="text-white js-filter d-inline-block d-lg-none" href="#">
+          Filter
+        </a>
+        <div class="filter-wrap">
+          <div class="filter ml-auto" id="filters">
+            <a class="active" data-filter="*" href="#"> All </a>
+            <a data-filter=".ai" href="#"> AI </a>
+            <a data-filter=".os" href="#"> OS </a>
+            <a data-filter=".web" href="#"> Web </a>
+            <!-- <a data-filter=".iot" href="#"> IoT </a> -->
+            <a data-filter=".game" href="#"> Game </a>
+            <a data-filter=".other" href="#"> Other </a>
+          </div>
+        </div>
+      </div>
+      <div class="row gutter-isotope-item" id="posts">
+        {{ range .data.projects }}
+        <div class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+          <a
+            class="portfolio-item isotope-item gsap-reveal-img"
+            data-id="<%= i %>"
+            href="{{ .link }}"
+          >
+            <div class="overlay">
+              <span class="wrap-icon icon-link2"> </span>
+              <div class="portfolio-item-content">
+                <h3>{{ .title }}</h3>
+                <p>{{ .note }}</p>
+              </div>
+            </div>
+            <img
+              alt="Image"
+              class="lazyload img-fluid"
+              src="{{ .img | relURL }}"
+            />
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

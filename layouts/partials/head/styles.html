@@ -54,6 +54,18 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> {{ range site.Params.css }}
-<link rel="stylesheet" href="{{ . | relURL }}" />
+
+{{ $s := slice "css/style.css" }}
+{{ if .Params.css }}
+  {{ $s = $s | append .Params.css | uniq }}
+{{ end }}
+
+{{ range $s }} {{ $r := resources.Get . | minify | fingerprint }}
+<link
+  rel="stylesheet"
+  href="{{ $r.RelPermalink }}"
+  integrity="{{ $r.Data.Integrity }}"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 {{ end }}

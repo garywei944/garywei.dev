@@ -12,18 +12,30 @@ series = []
 tags = []
 videos = []
 draft = false
+
+[params]
+js = ["js/contact-form.js"]
+sections = [
+  "cover",
+  "about",
+  "projects",
+  # "blogs",
+  "education",
+  # "awards",
+  "experience",
+  "skills",
+  "contact",
+]
+slider_experience = false
 +++
 
-{{< p-bio >}}
 I always depict myself as a combination of a researcher and an engineer.
 I work on Machine Learning, Full Stack Web, Game Development, Cyber-security, etc.
-{{< /p-bio >}}
+{.lead .gsap-reveal}
 
-{{< p-bio >}}
 I finished my M.Eng. study in Computer Science at [**Cornell University**](https://www.cornell.edu/).
 I received Dual B.S. degrees in Math and Computer Science and Minor in Japanese at [**UMass Amherst**](https://www.umass.edu/).
-{{< /p-bio >}}
+{.mb-4 .gsap-reveal}
 
-{{< p-bio >}}
 My vision is to do something noble, and I'm still on the road to learning.
-{{< /p-bio >}}
+{.gsap-reveal}

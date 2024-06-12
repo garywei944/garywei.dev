@@ -1,0 +1,56 @@
+<!-- About -->
+<div class="unslate_co--section" id="about-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider">
+        <span class="gsap-reveal"> About Me </span>
+      </h2>
+      <span class="gsap-reveal">
+        <img alt="divider" src="/images/divider.png" width="76" />
+      </span>
+    </div>
+    <div class="row mt-5 justify-content-between">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <figure class="dotted-bg gsap-reveal-img">
+          <img alt="Gary Wei" class="img-fluid" src="/images/avatar.jpg" />
+        </figure>
+      </div>
+      <div class="col-lg-5 pr-lg-5">
+        <h3 class="mb-4 heading-h3">
+          <span class="gsap-reveal"> Guanghao (Gary) Wei </span>
+        </h3>
+        {{ .ctx.Content }}
+
+        <p></p>
+
+        <p class="lead gsap-reveal">
+          <a
+            class="btn btn-outline-pill btn-custom-light"
+            href="{{ .data.resume }}"
+            target="_blank"
+          >
+            Download Resume
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Logo -->
+<div class="unslate_co--section">
+  <div class="container">
+    <div class="owl-carousel logo-slider">
+      {{ range .data.logos }}
+      <div class="logo-v1 gsap-reveal">
+        <a href="{{ .link }}">
+          <img
+            alt="{{ .name }} Logo"
+            class="img-fluid"
+            src="{{ .img | relURL }}"
+          />
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

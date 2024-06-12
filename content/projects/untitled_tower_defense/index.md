@@ -14,12 +14,13 @@ images = [
   "/images/projects/untitled_tower_defense/cs590g_final_project_level_1.jpg",
   "/images/projects/untitled_tower_defense/cs590g_final_project_win.jpg",
   "/images/projects/untitled_tower_defense/cs590g_final_project_level_2.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_level_2_attacker.,jpg",
+  "/images/projects/untitled_tower_defense/cs590g_final_project_level_2_attacker.jpg",
   "/images/projects/untitled_tower_defense/cs590g_final_project_level_3.jpg"
 ]
 +++
 
-{{< page-head >}}Project Description{{< /page-head >}}
+Project Description
+{.detail-label}
 
 This is not just a tradition Tower Defense Game. We designed 3 levels to give players three different game modes.
 
@@ -40,16 +41,20 @@ Unlimited waves and no winning conditions.
 
 *Made with Unity.*
 
-{{< page-head >}}Contribution{{< /page-head >}}
+Contribution
+{.detail-label}
 Presented by
 - [**Yi Cao**](https://github.com/yicao928)
 - [**Charles Cao**](https://github.com/charlescao460)
 - [**Gary Wei**](https://github.com/garywei944)
 
-{{< page-head >}}Project Date{{< /page-head >}}
+Project Date
+{.detail-label}
+
 Dec 9th, 2020
 
-{{< page-head >}} Download {{< /page-head >}}
+Download
+{.detail-label}
 
 <a href="https://s3.amazonaws.com/ariseus.net/cs590g_final_project/aris_cs590g_final_project_1.0.0_win_x86_64.zip">
   <input
@@ -69,7 +74,8 @@ Dec 9th, 2020
 
 <p></p>
 
-{{< page-head >}} Source Code {{< /page-head >}}
+Source Code
+{.detail-label}
 
 <a href="https://github.com/garywei944/Untitled-Tower-Defense">
   <input
