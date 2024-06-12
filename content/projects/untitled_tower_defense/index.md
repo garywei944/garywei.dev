@@ -1,6 +1,7 @@
 +++
 title = 'Untitled Tower Defense'
-date = 2020-12-09T00:00:00-04:00
+date = 2020-12-09
+lastmod = 2024-06-12
 description = "Unity Game - Untitled Tower Defense"
 keywords = ["unity", "game", "untitled_tower_defense"]
 draft = false

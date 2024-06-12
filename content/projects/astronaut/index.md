@@ -1,6 +1,7 @@
 +++
 title = 'Astronaut'
-date = 2020-09-07T00:00:00-04:00
+date = 2020-09-07
+lastmod = 2024-06-12
 description = "Unity Game - Astronaut"
 keywords = ["unity", "game", "astronaut"]
 draft = false

@@ -122,9 +122,13 @@
 {{ end }}
 
 {{ range $s }} {{ $r := resources.Get . | minify | fingerprint }}
+{{ if hugo.IsServer }}
+<script src="{{ $r.Permalink }}"></script>
+{{ else }}
 <script
   src="{{ $r.Permalink }}"
   integrity="{{ $r.Data.Integrity }}"
   crossorigin="anonymous"
 ></script>
+{{ end }}
 {{ end }}
