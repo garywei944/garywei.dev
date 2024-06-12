@@ -1,3 +1,7 @@
 [services]
 [services.googleAnalytics]
 ID = "G-40R1VF80GB"
+
+[params]
+googleVerification = "K1OdvLepLCpb8OEfNoo6iKo3uodFpG_bmnnlNALza5g"
+pirsch = "ynBksHFaJG9ILflOolFIyhlGpvyl9cDk"

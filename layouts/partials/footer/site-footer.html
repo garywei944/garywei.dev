@@ -24,13 +24,16 @@
           <script>
             document.write(new Date().getFullYear());
           </script>
-          All rights reserved | This template is made with
+          Guanghao Wei.
+          All rights reserved.
+          <a href="/impressum/">Impressum</a>
+          | This template is made with
           <i aria-hidden="true" class="icon-heart"> </i> by
           <a href="https://colorlib.com"> Colorlib </a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
         <!-- print page date in something like Jan 02, 2006 -->
-        <p>Updated on {{ .Site.Params.dateModified.Format "Jan 02, 2006" }}</p>
+        <p>Updated on {{ site.Params.dateModified.Format "Jan 02, 2006" }}</p>
       </div>
     </div>
   </div>

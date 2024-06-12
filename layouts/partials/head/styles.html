@@ -54,6 +54,6 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> {{ range .Site.Params.css }}
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> {{ range site.Params.css }}
 <link rel="stylesheet" href="{{ . | relURL }}" />
 {{ end }}

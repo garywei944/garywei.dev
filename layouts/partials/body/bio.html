@@ -1,4 +1,4 @@
-<!-- {{ range .Site.Data.index.biography }}
+<!-- {{ range site.Data.index.biography }}
 <p class="lead gsap-reveal">{{ . | markdownify }}</p>
 {{ end }} -->
 
@@ -9,7 +9,7 @@
 <p class="lead gsap-reveal">
   <a
     class="btn btn-outline-pill btn-custom-light"
-    href="{{ .Site.Params.resume }}"
+    href="{{ site.Params.resume }}"
     target="_blank"
   >
     Download Resume

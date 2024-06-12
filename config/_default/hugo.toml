@@ -7,3 +7,5 @@ title = "Gary Wei's Website"
 [markup.goldmark.renderer]
 unsafe = true
 
+[taxonomies]
+  tag = 'tags'

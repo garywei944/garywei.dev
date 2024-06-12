@@ -9,7 +9,7 @@
       <div class="col-md-7 mx-auto text-center">
         <h1 class="heading gsap-reveal-hero">Gary Wei</h1>
         <h2 class="subheading gsap-reveal-hero">
-          {{ .Site.Data.index.slogan }}
+          {{ site.Data.index.slogan }}
         </h2>
       </div>
     </div>
@@ -85,7 +85,7 @@
 <div class="unslate_co--section">
   <div class="container">
     <div class="owl-carousel logo-slider">
-      {{ range .Site.Data.index.logos }}
+      {{ range site.Data.index.logos }}
       <div class="logo-v1 gsap-reveal">
         <a href="{{ .link }}">
           <img
@@ -131,7 +131,7 @@
         </div>
       </div>
       <div class="row gutter-isotope-item" id="posts">
-        {{ range .Site.Data.index.projects }}
+        {{ range site.Data.index.projects }}
         <div class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
           <a
             class="portfolio-item isotope-item gsap-reveal-img"
@@ -170,7 +170,7 @@
     </div>
 
     <div class="row gutter-v4 align-items-stretch">
-      {{ range $i, $e := .Site.Data.index.blogs }}
+      {{ range $i, $e := site.Data.index.blogs }}
       <div
         class="col-sm-6 col-md-6 {{ .class }} blog-post-entry"
         data-aos="fade-up"
@@ -209,7 +209,7 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      {{ range .Site.Data.index.education }}
+      {{ range site.Data.index.education }}
       <div class="col-md-6 col-lg-4 mb-4" id="{{ .id }}">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">
@@ -293,7 +293,7 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      {{ range .Site.Data.index.experience }}
+      {{ range site.Data.index.experience }}
       <div id="{{ .id }}" class="col-md-6 col-lg-4 mb-4">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">
@@ -327,7 +327,7 @@
       </span>
     </div>
     <div class="row gutter-v3">
-      {{ range .Site.Data.index.skills }}
+      {{ range site.Data.index.skills }}
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
           <div class="wrap-icon mb-3">

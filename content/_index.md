@@ -1,11 +1,17 @@
 +++
 title = "Gary Wei | ariseus - No Life is Enough"
-date = 2024-06-08T12:00:00Z
+date = 2021-05-15
+lastmod = 2024-06-11
 description = "Gary Wei's Website"
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
-draft = false
 
-ogImage = "images/staticimage.jpg"
+# for open graph and twitter card
+audio = []
+images = ['/images/staticimage.jpg']
+series = []
+tags = []
+videos = []
+draft = false
 +++
 
 {{< p-bio >}}

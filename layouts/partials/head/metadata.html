@@ -1,19 +1,10 @@
 <meta name="description" content="{{ .Description }}" />
 <meta name="keywords" content="{{ delimit .Keywords ", " }}">
-<meta name="author" content="{{ .Site.Params.Author }}" />
+<meta name="author" content="{{ site.Params.Author }}" />
 <meta name="robots" content="index, follow" />
 
-<!-- Open Graph Metadata -->
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ .Description }}" />
-<meta property="og:image" content="{{ .Params.ogImage | absURL }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:type" content="website" />
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/opengraph.html" . }}
 
-<!-- Twitter Cards Metadata -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:description" content="{{ .Description }}" />
-<meta name="twitter:image" content="{{ .Params.ogImage | absURL }}" />
-
-{{ partial "head/schema.html" . }} {{ partial "head/styles.html" . }}
+<meta name="google-site-verification" content="{{ site.Params.googleVerification }}">
