@@ -21,7 +21,7 @@ logos:
 
 projects:
   - class: 'ai'
-    link: 'https://acad.garywei.dev#projects'
+    link: 'https://acad.garywei.dev#publications'
     title: 'Academic projects'
     note: 'acad.garywei.dev'
     img: '/images/projects/acad_projects.jpg'
@@ -275,7 +275,7 @@ skills:
       Systems, High Performance Computing, and AI for Science
 
       Checkout my recent publications and research at
-      [**academic projects**](https://acad.garywei.dev#projects) for more details.
+      [**academic projects**](https://acad.garywei.dev#publications) for more details.
   - svg: '/images/svg/006-goal.svg'
     title: 'Game Programming - Unity'
     note: |
