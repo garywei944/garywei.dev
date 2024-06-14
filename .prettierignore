@@ -3,6 +3,7 @@
 **/*.min.js
 **/*.min.*.css
 **/*.min.*.js
+**/*.md
 public/
 
 layouts/shortcodes/color.html
