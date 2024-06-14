@@ -9,6 +9,12 @@ draft = false
 [params]
 background = "/images/projects/untitled_tower_defense/cs590g_final_project_level_1.jpg"
 subtitle = "CS 590G Final Project"
+url = "projects/untitled-tower-defense"
+authors = [
+  "[Yi Cao](https://github.com/yicao928)",
+  "[Charles Cao](https://github.com/charlescao460)",
+  "[Gary Wei](https://github.com/garywei944)"
+]
 images = [
   "/images/projects/untitled_tower_defense/cs590g_final_project_home.jpg",
   "/images/projects/untitled_tower_defense/cs590g_final_project_menu.jpg",
@@ -20,8 +26,9 @@ images = [
 ]
 +++
 
-Project Description
-{.detail-label}
+{{< pfl-col >}}
+
+##### Project Description
 
 This is not just a tradition Tower Defense Game. We designed 3 levels to give players three different game modes.
 
@@ -34,6 +41,10 @@ Each turret can be upgraded once or sold.
 
 Level 2 provides players with an opportunity to control the attackers and to play a third person action game.
 
+{{< /pfl-col >}}
+
+{{< pfl-col >}}
+
 {{< deeppink >}}**3 - Unlimited Random Tower Defense**{{< /deeppink >}}
 
 We implemented map generator in Level 3.
@@ -42,21 +53,7 @@ Unlimited waves and no winning conditions.
 
 _Made with Unity._
 
-Contribution
-{.detail-label}
-Presented by
-
-- [**Yi Cao**](https://github.com/yicao928)
-- [**Charles Cao**](https://github.com/charlescao460)
-- [**Gary Wei**](https://github.com/garywei944)
-
-Project Date
-{.detail-label}
-
-Dec 9th, 2020
-
-Download
-{.detail-label}
+##### Download
 
 <a href="https://s3.amazonaws.com/ariseus.net/cs590g_final_project/aris_cs590g_final_project_1.0.0_win_x86_64.zip">
   <input
@@ -76,8 +73,7 @@ Download
 
 <p></p>
 
-Source Code
-{.detail-label}
+##### Source Code
 
 <a href="https://github.com/garywei944/Untitled-Tower-Defense">
   <input
@@ -86,3 +82,5 @@ Source Code
     value="GitHub Repository"
   />
 </a>
+
+{{< /pfl-col >}}

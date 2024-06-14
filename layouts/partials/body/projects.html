@@ -12,27 +12,27 @@
         <h2 class="mr-auto heading-h2">
           <span class="gsap-reveal"> Projects </span>
         </h2>
-        <a class="text-white js-filter d-inline-block d-lg-none" href="#"> Filter </a>
+        <a class="text-white js-filter d-inline-block d-lg-none" href="#">Filter</a>
         <div class="filter-wrap">
           <div class="filter ml-auto" id="filters">
-            <a class="active" data-filter="*" href="#"> All </a>
-            <a data-filter=".ai" href="#"> AI </a>
-            <a data-filter=".os" href="#"> OS </a>
-            <a data-filter=".web" href="#"> Web </a>
-            <!-- <a data-filter=".iot" href="#"> IoT </a> -->
-            <a data-filter=".game" href="#"> Game </a>
-            <a data-filter=".other" href="#"> Other </a>
+            <a class="active" data-filter="*" href="#">All</a>
+            <a data-filter=".ai" href="#">AI</a>
+            <a data-filter=".os" href="#">OS</a>
+            <a data-filter=".web" href="#">Web</a>
+            <!-- <a data-filter=".iot" href="#">IoT</a> -->
+            <a data-filter=".game" href="#">Game</a>
+            <a data-filter=".other" href="#">Other</a>
           </div>
         </div>
       </div>
-      <div class="row gutter-isotope-item" id="posts">
+      <div id="posts" class="row gutter-isotope-item">
         {{ range $i, $e := .data.projects }}
           {{- $u := urls.Parse $e.link -}}
           <div class="item {{ $e.class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
             <a
-              class="portfolio-item isotope-item gsap-reveal-img"
-              data-id="{{ $i }}"
               href="{{ $u }}"
+              class="portfolio-item {{ if not $u.IsAbs }}ajax-load-page{{ end }} item-portrait isotope-item gsap-reveal-img"
+              data-id="{{ $i }}"
               {{ if $u.IsAbs }}
                 rel="{{ site.Params.external_links.rel }}" target="{{ site.Params.external_links.target }}"
               {{ end }}

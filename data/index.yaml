@@ -74,7 +74,7 @@ projects:
     note: 'Game, Unity - Sep 2020'
     img: '/images/projects/project_astronaut.jpg'
   - class: 'game'
-    link: '/projects/untitled_tower_defense'
+    link: '/projects/untitled-tower-defense'
     title: 'Untitled Tower Defense'
     note: 'Game, Unity - Dec 2020'
     img: '/images/projects/project_untitled_tower_defense.jpg'
