@@ -13,14 +13,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Build job
-  build:
+  # Build and Deploy job
+  deploy:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.127.0
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: deploy
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
@@ -39,10 +40,6 @@ jobs:
       - name: Build
         run: hugo --gc --minify -e production
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Sync to s3
         uses: jakejarvis/s3-sync-action@master
         with:
