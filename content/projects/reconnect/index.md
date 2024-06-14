@@ -5,7 +5,7 @@ description = "Unity Game - Astronaut"
 keywords = ["unity", "game", "astronaut"]
 landing = "page"
 type = "double"
-draft = false
+draft = true
 
 [params]
 background = "/images/projects/astronaut/cs590g_p1_start.jpg"
