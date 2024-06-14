@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    {{ partial "head/prerender.html" . }} {{ partial "head/metadata.html" . }}
-    {{ partial "head/styles.html" . }} {{ partial "head/analytics.html" . }}
+    {{ partialCached "head/prerender.html" . }}
+    {{ partial "head/metadata.html" . }}
+    {{ partial "head/styles.html" . }}
+    {{ partialCached "head/analytics.html" . }}
     <title>{{ .Title }}</title>
   </head>
   <body data-offset="200" data-spy="scroll" data-target=".site-nav-target">
@@ -21,7 +23,8 @@
 
     <div class="unslate_co--site-wrap">
       <div class="unslate_co--site-inner">
-        {{ partial "header/site-nav.html" . }} {{ block "main" . }}{{ end }}
+        {{ partialCached "header/site-nav.html" . }}
+        {{ block "main" . }}{{ end }}
       </div>
       {{ partial "footer/site-footer.html" . }}
     </div>

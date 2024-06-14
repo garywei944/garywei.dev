@@ -21,16 +21,11 @@
         </h3>
         {{ .ctx.Content }}
 
+
         <p></p>
 
         <p class="lead gsap-reveal">
-          <a
-            class="btn btn-outline-pill btn-custom-light"
-            href="{{ .data.resume }}"
-            target="_blank"
-          >
-            Download Resume
-          </a>
+          <a class="btn btn-outline-pill btn-custom-light" href="{{ .data.resume }}" target="_blank"> Download Resume </a>
         </p>
       </div>
     </div>
@@ -41,15 +36,11 @@
   <div class="container">
     <div class="owl-carousel logo-slider">
       {{ range .data.logos }}
-      <div class="logo-v1 gsap-reveal">
-        <a href="{{ .link }}">
-          <img
-            alt="{{ .name }} Logo"
-            class="img-fluid"
-            src="{{ .img | relURL }}"
-          />
-        </a>
-      </div>
+        <div class="logo-v1 gsap-reveal">
+          <a href="{{ .link }}">
+            <img alt="{{ .name }} Logo" class="img-fluid" src="{{ .img | relURL }}" />
+          </a>
+        </div>
       {{ end }}
     </div>
   </div>

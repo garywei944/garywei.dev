@@ -20,7 +20,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.127.0"
+          hugo-version: '0.127.0'
           extended: true
       - uses: actions/cache@v2
         with:
@@ -40,14 +40,14 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
-          SOURCE_DIR: "public"
+          AWS_REGION: 'us-east-1'
+          SOURCE_DIR: 'public'
 
       - name: Invalidate cloudfront
         uses: chetan/invalidate-cloudfront-action@master
         env:
-          PATHS: "/*"
-          AWS_REGION: "us-east-1"
+          PATHS: '/*'
+          AWS_REGION: 'us-east-1'
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

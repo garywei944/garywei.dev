@@ -55,16 +55,14 @@
   referrerpolicy="no-referrer"
 />
 
-{{ $s := slice "css/style.css" }} {{ if .Params.css }} {{ $s = $s | append
-.Params.css | uniq }} {{ end }} {{ range $s }} {{ $r := resources.Get . | minify
-| fingerprint }} {{ if hugo.IsServer }}
-<link rel="stylesheet" href="{{ $r.RelPermalink }}" />
-{{ else }}
-<link
-  rel="stylesheet"
-  href="{{ $r.RelPermalink }}"
-  integrity="{{ $r.Data.Integrity }}"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-{{ end }} {{ end }}
+{{ $s := slice "css/style.css" }}
+{{ if .Params.css }}{{ $s = $s | append .Params.css | uniq }}{{ end }}
+
+{{ range $s }}
+  {{ $r := resources.Get . | minify | fingerprint }}
+  {{ if hugo.IsServer }}
+    <link rel="stylesheet" href="{{ $r.RelPermalink }}" />
+  {{ else }}
+    <link rel="stylesheet" href="{{ $r.RelPermalink }}" integrity="{{ $r.Data.Integrity }}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{ end }}
+{{ end }}

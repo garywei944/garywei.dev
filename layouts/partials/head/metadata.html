@@ -1,5 +1,5 @@
 <meta name="description" content="{{ .Description }}" />
-<meta name="keywords" content="{{ delimit .Keywords ", " }}">
+<meta name="keywords" content="{{ delimit .Keywords ", " }}" />
 <meta name="author" content="{{ site.Params.Author }}" />
 <meta name="robots" content="index, follow" />
 
@@ -7,4 +7,5 @@
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/opengraph.html" . }}
 
-<meta name="google-site-verification" content="{{ site.Params.googleVerification }}">
+
+<meta name="google-site-verification" content="{{ site.Params.googleVerification }}" />

@@ -114,21 +114,18 @@
   referrerpolicy="no-referrer"
 ></script>
 
-{{ if .Param "math" }} {{ partialCached "head/p/math.html" . }} {{ end }}
+{{ if .Param "math" }}{{ partialCached "head/p/math.html" . }}{{ end }}
 
 {{ $s := slice "js/main.js" }}
 {{ if .Params.js }}
   {{ $s = $s | append .Params.js | uniq }}
 {{ end }}
 
-{{ range $s }} {{ $r := resources.Get . | minify | fingerprint }}
-{{ if hugo.IsServer }}
-<script src="{{ $r.Permalink }}"></script>
-{{ else }}
-<script
-  src="{{ $r.Permalink }}"
-  integrity="{{ $r.Data.Integrity }}"
-  crossorigin="anonymous"
-></script>
-{{ end }}
+{{ range $s }}
+  {{ $r := resources.Get . | minify | fingerprint }}
+  {{ if hugo.IsServer }}
+    <script src="{{ $r.Permalink }}"></script>
+  {{ else }}
+    <script src="{{ $r.Permalink }}" integrity="{{ $r.Data.Integrity }}" crossorigin="anonymous"></script>
+  {{ end }}
 {{ end }}

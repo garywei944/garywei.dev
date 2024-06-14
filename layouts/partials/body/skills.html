@@ -11,16 +11,16 @@
     </div>
     <div class="row gutter-v3">
       {{ range .data.skills }}
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-          <div class="wrap-icon mb-3">
-            <img alt="Image" src="{{ .svg | relURL }}" width="45" />
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+            <div class="wrap-icon mb-3">
+              <img alt="Image" src="{{ .svg | relURL }}" width="45" />
+            </div>
+            <h3>{{ .title }}</h3>
+            <p></p>
+            {{ .note | markdownify }}
           </div>
-          <h3>{{ .title }}</h3>
-          <p></p>
-          {{ .note | markdownify }}
         </div>
-      </div>
       {{ end }}
     </div>
   </div>

@@ -1,9 +1,7 @@
 {{ define "main" }}
-
-{{ $data := site.Data.index }}
-{{ $ctx := dict "ctx" . "data" $data }}
-{{ range .Params.sections }}
-  {{ partial (print "body/" . ".html") $ctx }}
-{{ end }}
-
+  {{ $data := site.Data.index }}
+  {{ $ctx := dict "ctx" . "data" $data }}
+  {{ range .Params.sections }}
+    {{ partial (print "body/" . ".html") $ctx }}
+  {{ end }}
 {{ end }}

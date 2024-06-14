@@ -3,14 +3,10 @@
   "trailingComma": "es5",
   "printWidth": 150,
   "proseWrap": "always",
-  "plugins": [
-    "prettier-plugin-go-template"
-  ],
+  "plugins": ["prettier-plugin-go-template"],
   "overrides": [
     {
-      "files": [
-        "*.html"
-      ],
+      "files": ["*.html"],
       "options": {
         "parser": "go-template"
       }
