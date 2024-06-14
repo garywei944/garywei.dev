@@ -1,5 +1,9 @@
 math = false
 author = "Gary Wei"
 
+[external_links]
+rel = "external nofollow noopener"
+target = "_blank"
+
 [social]
 twitter = "garywei944" # used for twitter cards

@@ -8,15 +8,11 @@
     </div>
     <div id="portfolio-single-holder"></div>
     <div class="portfolio-wrapper">
-      <div
-        class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter"
-      >
+      <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
         <h2 class="mr-auto heading-h2">
           <span class="gsap-reveal"> Projects </span>
         </h2>
-        <a class="text-white js-filter d-inline-block d-lg-none" href="#">
-          Filter
-        </a>
+        <a class="text-white js-filter d-inline-block d-lg-none" href="#"> Filter </a>
         <div class="filter-wrap">
           <div class="filter ml-auto" id="filters">
             <a class="active" data-filter="*" href="#"> All </a>
@@ -30,27 +26,27 @@
         </div>
       </div>
       <div class="row gutter-isotope-item" id="posts">
-        {{ range .data.projects }}
-        <div class="item {{ .class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-          <a
-            class="portfolio-item isotope-item gsap-reveal-img"
-            data-id="<%= i %>"
-            href="{{ .link }}"
-          >
-            <div class="overlay">
-              <span class="wrap-icon icon-link2"> </span>
-              <div class="portfolio-item-content">
-                <h3>{{ .title }}</h3>
-                <p>{{ .note }}</p>
+        {{ range $i, $e := .data.projects }}
+          {{- $u := urls.Parse $e.link -}}
+          <div class="item {{ $e.class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+            <a
+              class="portfolio-item isotope-item gsap-reveal-img"
+              data-id="{{ $i }}"
+              href="{{ $u }}"
+              {{ if $u.IsAbs }}
+                rel="{{ site.Params.external_links.rel }}" target="{{ site.Params.external_links.target }}"
+              {{ end }}
+            >
+              <div class="overlay">
+                <span class="wrap-icon icon-link2"> </span>
+                <div class="portfolio-item-content">
+                  <h3>{{ $e.title }}</h3>
+                  <p>{{ $e.note }}</p>
+                </div>
               </div>
-            </div>
-            <img
-              alt="Image"
-              class="lazyload img-fluid"
-              src="{{ .img | relURL }}"
-            />
-          </a>
-        </div>
+              <img alt="Image" class="lazyload img-fluid" src="{{ $e.img | relURL }}" />
+            </a>
+          </div>
         {{ end }}
       </div>
     </div>

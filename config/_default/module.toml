@@ -1,0 +1,11 @@
+[hugoVersion]
+extended = false
+max = ''
+min = '0.126.0'
+
+[[mounts]]
+source = 'assets'
+target = 'assets'
+[[mounts]]
+source = 'static'
+target = 'assets'

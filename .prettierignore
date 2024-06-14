@@ -1,0 +1,9 @@
+**/*.map
+**/*.min.css
+**/*.min.js
+**/*.min.*.css
+**/*.min.*.js
+public/
+
+layouts/shortcodes/color.html
+content/impressum.md

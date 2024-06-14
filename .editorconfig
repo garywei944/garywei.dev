@@ -10,13 +10,7 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.toml]
-max_line_length = 100
-
-[*.md]
-trim_trailing_whitespace = false
-
-[*.yaml]
+[*.{md,toml,yml,yaml}]
 trim_trailing_whitespace = false
 
 [layouts/shortcodes/*.html]

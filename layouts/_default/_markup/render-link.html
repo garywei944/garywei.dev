@@ -1,0 +1,9 @@
+{{- $u := urls.Parse .Destination -}}
+<a
+  href="{{ .Destination | safeURL }}"
+  {{- with .Title }}title="{{ . }}"{{ end -}}
+  {{- if $u.IsAbs }}rel="{{ site.Params.external_links.rel }}" target="{{ site.Params.external_links.target }}"{{ end -}}
+>
+  {{- with .Text | safeHTML }}{{ . }}{{ end -}}
+</a>
+{{- /* chomp trailing newline */ -}}
