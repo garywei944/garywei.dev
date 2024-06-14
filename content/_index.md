@@ -1,7 +1,7 @@
 +++
 title = "Gary Wei | ariseus - No Life is Enough"
 date = 2021-05-15
-lastmod = 2024-06-12
+lastmod = 2024-06-14
 description = "Gary Wei's Personal Website"
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
 
