@@ -14,7 +14,7 @@ on:
 
 jobs:
   # Build job
-  deploy:
+  check:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.127.0
@@ -24,16 +24,12 @@ jobs:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Check for broken Links
-        uses: marojor/hugo-broken-link-checker@v1.0.5
-        with:
-          skip-file: 'skip-rules-for-broken-links-check.txt'
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${HUGO_VERSION}
           extended: true
+
       - uses: actions/cache@v4
         with:
           path: /home/runner/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
@@ -41,8 +37,10 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+
       - name: Build
         run: hugo --minify -e production
+
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:
