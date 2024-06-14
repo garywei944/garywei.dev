@@ -1,47 +1,48 @@
-name: Check for broken links on site
+name: Check if build site has broken links
 
 on:
-  workflow_run:
-    workflows: [Deploy to AWS]
-    types: [completed]
+  push:
+    # Runs on pushes targeting the default branch
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  check-links-on-site:
-    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-a-workflow-based-on-the-conclusion-of-another-workflow
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    # available images: https://github.com/actions/runner-images#available-images
+  # Build job
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.127.0
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Check for broken Links
+        uses: marojor/hugo-broken-link-checker@v1.0.5
+        with:
+          skip-file: 'skip-rules-for-broken-links-check.txt'
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.127.0'
+          hugo-version: ${HUGO_VERSION}
           extended: true
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
-          path: /tmp/hugo_cache
+          path: /home/runner/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
+          # path: /tmp/hugo_cache                 # <-- with hugo version < v0.116.0
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
-      # - name: Update _config.yml ⚙️
-      #   uses: fjogeleit/yaml-update-action@main
-      #   with:
-      #     commitChange: false
-      #     valueFile: "_config.yml"
-      #     changes: |
-      #       {
-      #         "giscus.repo": "${{ github.repository }}",
-      #         "baseurl": ""
-      #       }
-      - name: Install and Build 🔧
-        run: |
-          hugo --minify -e production
-      # - name: Purge unused CSS 🧹
-      #   run: |
-      #     npm install -g purgecss
-      #     purgecss -c purgecss.config.js
+      - name: Build
+        run: hugo --minify -e production
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:

@@ -1,34 +1,41 @@
-name: Deploy to AWS
+name: Hugo Build and Deploy to AWS
 
 on:
   push:
+    # Runs on pushes targeting the default branch
     branches:
-      - deploy # Set a branch to deploy
+      - deploy
   pull_request:
+    branches:
+      - deploy
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
+  # Build job
   deploy:
     runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      HUGO_VERSION: 0.127.0
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.127.0'
+          hugo-version: ${HUGO_VERSION}
           extended: true
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
-          path: /tmp/hugo_cache
+          path: /home/runner/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
+          # path: /tmp/hugo_cache                 # <-- with hugo version < v0.116.0
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
-
       - name: Build
         run: hugo --minify -e production
 
@@ -44,7 +51,7 @@ jobs:
           SOURCE_DIR: 'public'
 
       - name: Invalidate cloudfront
-        uses: chetan/invalidate-cloudfront-action@master
+        uses: chetan/invalidate-cloudfront-action@v2
         env:
           PATHS: '/*'
           AWS_REGION: 'us-east-1'
