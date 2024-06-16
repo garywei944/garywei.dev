@@ -47,7 +47,7 @@ projects:
     note: 'Web, Full Stack - May 2021'
     img: '/images/projects/project_cg3.jpg'
   - class: 'web ai'
-    link: 'https://github.com/garywei944/Reconnect-Unihack21_Devil_Otter'
+    link: '/projects/reconnect'
     title: 'Reconnect System'
     note: 'Web, AI - Aug 2021'
     img: '/images/projects/project_unihack21_reconnect.jpg'
