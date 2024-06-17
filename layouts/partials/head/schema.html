@@ -1,0 +1,21 @@
+<!-- layouts/partials/head/schema.html -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "{{ .Params.schemaType | default "WebSite" }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
+    "headline": "{{ .Title }}",
+    "description": "{{ .Description }}",
+    "image": "{{ .Params.ogImage | absURL }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.Params.Author }}"
+    },
+    "name": "{{ site.Params.Author }}",
+    "datePublished": "{{ site.Params.DatePublished.Format "2006-01-02" }}",
+    "dateModified": "{{ .Date.Format "2006-01-02" }}"
+  }
+</script>
