@@ -1,2 +1,6 @@
-{{ template "_internal/google_analytics.html" . }}
-{{ partial "head/p/pirsch.html" . }}
+{{ if site.Params.use_google_analytics }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+{{ if site.Params.use_pirsch_analytics }}
+  {{ partial "head/p/pirsch.html" . }}
+{{ end }}
