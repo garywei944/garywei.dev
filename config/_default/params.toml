@@ -1,5 +1,6 @@
 math = false
 author = "Gary Wei"
+robots = "index, follow"
 
 use_google_analytics = true
 use_pirsch_analytics = true

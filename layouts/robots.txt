@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: {{ add site.BaseURL "sitemap.xml" }}
