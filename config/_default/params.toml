@@ -11,3 +11,7 @@ target = "_blank"
 
 [social]
 twitter = "garywei944" # used for twitter cards
+
+[hugomods]
+[hugomods.images]
+modern_format = 'webp'

@@ -3,9 +3,30 @@ extended = false
 max = ''
 min = '0.126.0'
 
+[[imports]]
+path = 'github.com/hugomods/images'
+
+[[mounts]]
+source = 'content'
+target = 'content'
+[[mounts]]
+source = 'static'
+target = 'static'
+[[mounts]]
+source = 'layouts'
+target = 'layouts'
+[[mounts]]
+source = 'data'
+target = 'data'
 [[mounts]]
 source = 'assets'
 target = 'assets'
 [[mounts]]
-source = 'static'
-target = 'assets'
+source = 'i18n'
+target = 'i18n'
+[[mounts]]
+source = 'archetypes'
+target = 'archetypes'
+[[mounts]]
+source = 'static/uploads'
+target = 'assets/uploads'
