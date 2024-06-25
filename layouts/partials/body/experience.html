@@ -6,7 +6,7 @@
         <h2 class="heading-h2 text-center divider">
           <span class="gsap-reveal"> Experience </span>
         </h2>
-        <span class="gsap-reveal"><img src="/images/divider.png" alt="divider" width="76" /></span>
+        <span class="gsap-reveal">{{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}</span>
       </div>
     </div>
     <div class="owl-carousel testimonial-slider" data-aos="fade-up">
@@ -18,7 +18,11 @@
               <blockquote>{{ .note | markdownify }}</blockquote>
             </div>
             <div class="testimonial-author-info">
-              <img src="{{ .img | relURL }}" alt="Image" />
+              {{ partial "images/image" (dict
+                "Filename" (printf "%s?width=45" .img)
+                "Alt" .title
+                )
+              }}
               <h3>{{ .title }}</h3>
               <span class="d-block position">{{ .name }}, {{ .time }}</span>
             </div>
@@ -43,7 +47,11 @@
           <div id="{{ .id }}" class="col-md-6 col-lg-4 mb-4">
             <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
               <div class="wrap-icon mb-3">
-                <img alt="Image" src="{{ .img | relURL }}" width="45" />
+                {{ partial "images/image" (dict
+                  "Filename" (printf "%s?width=45" .img)
+                  "Alt" .title
+                  )
+                }}
               </div>
               <h3>{{ .title }}</h3>
               <br />

@@ -14,7 +14,11 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
             <div class="wrap-icon mb-3">
-              <img alt="Image" src="{{ .img | relURL }}" width="45" />
+              {{ partial "images/image" (dict
+                "Filename" (printf "%s?width=45" .img)
+                "Alt" .title
+                )
+              }}
             </div>
             <h3>{{ .title }}</h3>
             <br />

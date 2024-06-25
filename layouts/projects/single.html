@@ -1,5 +1,14 @@
 {{ define "main" }}
-  <div class="cover-v1 gradient-bottom-black jarallax" style="background-image: url('{{ .Params.background | relURL }}')">
+  <div
+    class="cover-v1 gradient-bottom-black jarallax"
+    style="
+    {{ with resources.Get .Params.background }}
+      {{ with .Filter (images.Process "webp") }}
+        background-image: url('{{ .RelPermalink }}')
+      {{ end }}
+    {{ end }}
+"
+  >
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-10 mx-auto text-center">
@@ -31,7 +40,10 @@
             <div class="owl-carousel single-slider">
               {{ range .Params.images }}
                 <figure class="mb-4">
-                  <img src="{{ . | relURL }}" alt="Image" class="img-fluid" />
+                  {{ partial "images/image" (dict
+                    "Filename" .
+                    )
+                  }}
                 </figure>
               {{ end }}
             </div>

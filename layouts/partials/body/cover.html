@@ -2,7 +2,7 @@
   class="cover-v1 jarallax"
   id="home-section"
   style="
-{{ with resources.Get .data.background }}
+  {{ with resources.Get .data.background }}
     {{ with .Filter (images.Process "webp") }}
       background-image: url('{{ .RelPermalink }}')
     {{ end }}
@@ -29,7 +29,7 @@
   <div class="container">
     <div class="section-heading-wrap text-center mb-5">
       <h2 class="heading-h2 text-center divider">
-        <span class="gsap-reveal"> Academic Profile </span>
+        <span class="gsap-reveal">Academic Profile</span>
       </h2>
       <span class="gsap-reveal">
         {{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}
@@ -40,13 +40,17 @@
         <h3 class="mb-4 heading-h3">
           <span class="gsap-reveal">
             Checkout
-            <a href="https://acad.garywei.dev/"> acad.garywei.dev </a>
+            <a href="https://acad.garywei.dev/">acad.garywei.dev</a>
             for my academic profile!
           </span>
         </h3>
         <a href="https://acad.garywei.dev/">
           <figure class="dotted-bg gsap-reveal-img">
-            <img alt="Academic Profile" class="img-fluid" src="/images/academic_profile.jpg" />
+            {{ partial "images/image" (dict
+              "Filename" "/images/academic_profile.jpg"
+              "Alt" "Academic Profile"
+              )
+            }}
           </figure>
         </a>
       </div>

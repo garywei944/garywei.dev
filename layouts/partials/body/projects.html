@@ -44,7 +44,11 @@
                   <p>{{ $e.note }}</p>
                 </div>
               </div>
-              <img alt="Image" class="lazyload img-fluid" src="{{ $e.img | relURL }}" />
+              {{ partial "images/image" (dict
+                "Filename" $e.img
+                "Alt" $e.title
+                )
+              }}
             </a>
           </div>
         {{ end }}
