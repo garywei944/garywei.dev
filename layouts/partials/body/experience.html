@@ -6,7 +6,15 @@
         <h2 class="heading-h2 text-center divider">
           <span class="gsap-reveal"> Experience </span>
         </h2>
-        <span class="gsap-reveal">{{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}</span>
+        <span class="gsap-reveal">
+          {{ partial "picture"  (dict
+            "ctx" .ctx
+            "src" "assets/images/divider.png"
+            "alt" "divider"
+            "width" 76
+            )
+          }}
+        </span>
       </div>
     </div>
     <div class="owl-carousel testimonial-slider" data-aos="fade-up">
@@ -39,7 +47,13 @@
           <span class="gsap-reveal"> Experience </span>
         </h2>
         <span class="gsap-reveal">
-          {{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}
+          {{ partial "picture"  (dict
+            "ctx" .ctx
+            "src" "assets/images/divider.png"
+            "alt" "divider"
+            "width" 76
+            )
+          }}
         </span>
       </div>
       <div class="row gutter-v3">
@@ -47,9 +61,11 @@
           <div id="{{ .id }}" class="col-md-6 col-lg-4 mb-4">
             <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
               <div class="wrap-icon mb-3">
-                {{ partial "images/image" (dict
-                  "Filename" (printf "%s?width=45" .img)
-                  "Alt" .title
+                {{ partial "picture"  (dict
+                  "ctx" $.ctx
+                  "src" (path.Join "assets" .img)
+                  "alt" .title
+                  "width" 45
                   )
                 }}
               </div>

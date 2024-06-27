@@ -39,12 +39,15 @@
           <div class="col-12 mb-4">
             <div class="owl-carousel single-slider">
               {{ range .Params.images }}
-                <figure class="mb-4">
-                  {{ partial "images/image" (dict
-                    "Filename" .
+                <div class="mb-4">
+                  {{ partial "figure"  (dict
+                    "ctx" $
+                    "src" (path.Join "assets" .)
+                    "alt" (printf "%s Image" $.Title)
+                    "sizes" "95vw"
                     )
                   }}
-                </figure>
+                </div>
               {{ end }}
             </div>
           </div>

@@ -32,7 +32,13 @@
         <span class="gsap-reveal">Academic Profile</span>
       </h2>
       <span class="gsap-reveal">
-        {{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}
+        {{ partial "picture"  (dict
+          "ctx" .ctx
+          "src" "assets/images/divider.png"
+          "alt" "divider"
+          "width" 76
+          )
+        }}
       </span>
     </div>
     <div class="row mt-5 justify-content-between">
@@ -44,15 +50,13 @@
             for my academic profile!
           </span>
         </h3>
-        <a href="https://acad.garywei.dev/">
-          <figure class="dotted-bg gsap-reveal-img">
-            {{ partial "images/image" (dict
-              "Filename" "/images/academic_profile.jpg"
-              "Alt" "Academic Profile"
-              )
-            }}
-          </figure>
-        </a>
+        {{ partial "figure"  (dict
+          "ctx" .ctx
+          "src" "assets/images/academic_profile.jpg"
+          "link" "https://acad.garywei.dev/"
+          "alt" "Academic Profile"
+          )
+        }}
       </div>
     </div>
   </div>

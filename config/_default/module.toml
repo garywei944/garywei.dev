@@ -5,6 +5,9 @@ min = '0.126.0'
 
 [[imports]]
 path = 'github.com/hugomods/images'
+[[imports]]
+path = 'github.com/future-wd/hugo-responsive-images'
+replacement = 'github.com/garywei944/hugo-responsive-images' # fix issue https://github.com/future-wd/hugo-responsive-images/issues/67
 
 [[mounts]]
 source = 'content'

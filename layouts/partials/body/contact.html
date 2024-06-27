@@ -5,7 +5,13 @@
         <span class="gsap-reveal"> Get In Touch </span>
       </h2>
       <span class="gsap-reveal">
-        {{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}
+        {{ partial "picture"  (dict
+          "ctx" .ctx
+          "src" "assets/images/divider.png"
+          "alt" "divider"
+          "width" 76
+          )
+        }}
       </span>
     </div>
 

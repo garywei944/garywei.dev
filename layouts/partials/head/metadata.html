@@ -2,10 +2,11 @@
 <meta name="keywords" content="{{ delimit .Keywords ", " }}" />
 <meta name="author" content="{{ site.Params.Author }}" />
 <meta name="robots" content="{{ site.Params.robots }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/schema.html" . }}
-{{ template "_internal/opengraph.html" . }}
+{{ partial "head/p/twitter_cards.html" . }}
+{{ partial "head/p/schema.html" . }}
+{{ partial "head/p/og.html" . }}
 
 
 <meta name="google-site-verification" content="{{ site.Params.googleVerification }}" />

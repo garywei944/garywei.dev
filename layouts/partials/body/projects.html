@@ -44,9 +44,12 @@
                   <p>{{ $e.note }}</p>
                 </div>
               </div>
-              {{ partial "images/image" (dict
-                "Filename" $e.img
-                "Alt" $e.title
+              {{ partial "img" (dict
+                "src" (path.Join "assets" $e.img)
+                "ctx" $.ctx
+                "alt" $e.title
+                "width" 800
+                "loading" "auto"
                 )
               }}
             </a>

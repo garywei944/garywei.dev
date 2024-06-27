@@ -1,7 +1,7 @@
 +++
 title = "Gary Wei | ariseus - No Life is Enough"
 date = 2021-05-15
-lastmod = 2024-06-14
+lastmod = 2024-06-26
 description = "Gary Wei's Personal Website"
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
 
@@ -27,6 +27,9 @@ sections = [
   "contact",
 ]
 slider_experience = false
+
+[params.image]
+figure_class = 'dotted-bg gsap-reveal-img'
 +++
 
 I always depict myself as a combination of a researcher and an engineer.

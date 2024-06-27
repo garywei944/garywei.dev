@@ -6,18 +6,23 @@
         <span class="gsap-reveal"> About Me </span>
       </h2>
       <span class="gsap-reveal">
-        {{ partial "images/image" (dict "Page" . "Filename" "/images/divider.png?width=76" "Alt" "divider" ) }}
+        {{ partial "picture"  (dict
+          "ctx" .ctx
+          "src" "assets/images/divider.png"
+          "alt" "divider"
+          "width" 76
+          )
+        }}
       </span>
     </div>
     <div class="row mt-5 justify-content-between">
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <figure class="dotted-bg gsap-reveal-img">
-          {{ partial "images/image" (dict
-            "Filename" "/images/avatar.jpg"
-            "Alt" "Gary Wei"
-            )
-          }}
-        </figure>
+        {{ partial "figure"  (dict
+          "ctx" .ctx
+          "src" "assets/images/avatar.jpg"
+          "alt" "Gary Wei"
+          )
+        }}
       </div>
       <div class="col-lg-5 pr-lg-5">
         <h3 class="mb-4 heading-h3">
@@ -42,7 +47,13 @@
       {{ range .data.logos }}
         <div class="logo-v1 gsap-reveal">
           <a href="{{ .link }}">
-            {{ partial "images/image" (dict "Page" . "Filename" .img "Alt" (printf "%s Logo" .name) ) }}
+            {{ partial "picture"  (dict
+              "ctx" $.ctx
+              "src" (path.Join "assets" .img)
+              "alt" (printf "%s Logo" .name)
+              "sizes" "100vw"
+              )
+            }}
           </a>
         </div>
       {{ end }}
