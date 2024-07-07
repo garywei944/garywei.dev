@@ -44,14 +44,27 @@
                   <p>{{ $e.note }}</p>
                 </div>
               </div>
-              {{ partial "img" (dict
-                "src" (path.Join "assets" $e.img)
-                "ctx" $.ctx
-                "alt" $e.title
-                "width" 800
-                "loading" "auto"
-                )
-              }}
+              {{ if $e.resource }}
+                {{ with $.ctx.GetPage $e.resource }}
+                  {{ partial "img" (dict
+                    "src" $e.img
+                    "ctx" .
+                    "alt" $e.title
+                    "width" 800
+                    "loading" "auto"
+                    )
+                  }}
+                {{ end }}
+              {{ else }}
+                {{ partial "img" (dict
+                  "src" $e.img
+                  "ctx" $.ctx
+                  "alt" $e.title
+                  "width" 800
+                  "loading" "auto"
+                  )
+                }}
+              {{ end }}
             </a>
           </div>
         {{ end }}

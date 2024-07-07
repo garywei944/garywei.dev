@@ -2,7 +2,7 @@
   <div
     class="cover-v1 gradient-bottom-black jarallax"
     style="
-    {{ with resources.Get .Params.background }}
+    {{ with .Resources.Get .Params.background }}
       {{ with .Filter (images.Process "webp") }}
         background-image: url('{{ .RelPermalink }}')
       {{ end }}
@@ -42,7 +42,7 @@
                 <div class="mb-4">
                   {{ partial "figure"  (dict
                     "ctx" $
-                    "src" (path.Join "assets" .)
+                    "src" .
                     "alt" (printf "%s Image" $.Title)
                     "sizes" "95vw"
                     )

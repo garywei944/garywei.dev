@@ -7,7 +7,7 @@ keywords = ["unity", "game", "untitled-tower-defense"]
 draft = false
 
 [params]
-background = "/images/projects/untitled_tower_defense/cs590g_final_project_level_1.jpg"
+background = "images/level_1.jpg"
 subtitle = "CS 590G Final Project"
 url = "projects/untitled-tower-defense"
 authors = [
@@ -16,13 +16,13 @@ authors = [
   "[Gary Wei](https://github.com/garywei944)"
 ]
 images = [
-  "/images/projects/untitled_tower_defense/cs590g_final_project_home.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_menu.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_level_1.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_win.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_level_2.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_level_2_attacker.jpg",
-  "/images/projects/untitled_tower_defense/cs590g_final_project_level_3.jpg"
+  "images/home.jpg",
+  "images/menu.jpg",
+  "images/level_1.jpg",
+  "images/win.jpg",
+  "images/level_2.jpg",
+  "images/level_2_attacker.jpg",
+  "images/level_3.jpg"
 ]
 +++
 

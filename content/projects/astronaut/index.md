@@ -7,15 +7,15 @@ keywords = ["unity", "game", "astronaut"]
 draft = false
 
 [params]
-background = "/images/projects/astronaut/cs590g_p1_start.jpg"
+background = "images/start.jpg"
 subtitle = "My First Game"
 url = "projects/astronaut"
 authors = ["[Gary Wei](https://github.com/garywei944)"]
 images = [
-  "/images/projects/astronaut/cs590g_p1_before_finish_zone.jpg",
-  "/images/projects/astronaut/cs590g_p1_on_finish_zone.jpg",
-  "/images/projects/astronaut/cs590g_p1_start.jpg",
-  "/images/projects/astronaut/cs590g_p1_on_air.jpg"
+  "images/before_finish_zone.jpg",
+  "images/on_finish_zone.jpg",
+  "images/start.jpg",
+  "images/on_air.jpg"
 ]
 
 +++
