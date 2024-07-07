@@ -9,7 +9,13 @@
               <span class="gsap-reveal">{{ .Title }}</span>
             </h2>
             <span class="gsap-reveal">
-              <img src="/images/divider.png" alt="divider" width="76" />
+              {{ partial "picture"  (dict
+                "ctx" .
+                "src" "assets/images/divider.png"
+                "alt" "divider"
+                "width" 76
+                )
+              }}
             </span>
           </div>
         </div>
