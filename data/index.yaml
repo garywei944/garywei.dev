@@ -3,6 +3,12 @@ slogan: "Researcher | Engineer | Hacker | Gamer"
 resume: "https://s3.amazonaws.com/garywei.dev/Guanghao_Wei_Resume.pdf"
 
 logos:
+  - name: "ByteDance"
+    img: "/images/logo_bytedance.png"
+    link: "#experience-bytedance"
+  - name: "TikTok"
+    img: "/images/logo_tiktok_black.png"
+    link: "#experience-bytedance"
   - name: "Cornell"
     img: "/images/logo_cornell_c.png"
     link: "#education-cornell"
@@ -181,6 +187,15 @@ awards:
     content: "noip"
 
 experience:
+  - id: "experience-bytedance"
+    svg: "/images/svg/bytedance-seeklogo.svg"
+    name: "ByteDance Inc."
+    title: "Machine Learning Engineer"
+    time: "2024.07 - Present"
+    note: |
+      I will join ByteDance Inc. as a Machine Learning Engineer in July 2024.
+
+      I will work on the TikTok Applied Machine Learning - Model Training Infrastructure team.
   - id: "experience-relax-ml"
     img: "/images/avatar_cornell.png"
     name: "Cornell Relax ML Lab"
@@ -194,6 +209,19 @@ experience:
       Our work, grounded in mathematical principles, aims to expedite
       large-scale, high-performance machine learning systems that are efficient,
       parallel, and distributed in real-world settings.
+  - img: "/images/avatar_umass_badge.png"
+    name: "UMass BioNLP Lab"
+    title: "Research Assistant"
+    time: "May 2021 - June 2022"
+    note: |
+      I worked at [**UMass BioNLP Lab**](https://bio-nlp.org/) on practical
+      biomedical NLP projects directed by Prof.
+      [**Hong Yu**](https://www.uml.edu/sciences/computer-science/faculty/yu-hong.aspx).
+
+      My responsibilities include: Information Retrieval, Data Processing,
+      Model Implementation, Performance Analysis, and Application Product
+      Implementation.
+volunteer:
   - id: "experience-cornell-cssa"
     img: "/images/avatar_cornell_cssa.png"
     name: "Cornell CSSA"
@@ -215,18 +243,6 @@ experience:
 
       I represented Cornell CDSC as a first-team player in the ivy league and
       other competitions.
-  - img: "/images/avatar_umass_badge.png"
-    name: "UMass BioNLP Lab"
-    title: "Research Assistant"
-    time: "May 2021 - June 2022"
-    note: |
-      I worked at [**UMass BioNLP Lab**](https://bio-nlp.org/) on practical
-      biomedical NLP projects directed by Prof.
-      [**Hong Yu**](https://www.uml.edu/sciences/computer-science/faculty/yu-hong.aspx).
-
-      My responsibilities include: Information Retrieval, Data Processing,
-      Model Implementation, Performance Analysis, and Application Product
-      Implementation.
   - id: "experience-umass-cssa"
     img: "/images/avatar_cssa.png"
     name: "UMass Amherst CSSA"

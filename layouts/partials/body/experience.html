@@ -4,7 +4,7 @@
     <div class="container">
       <div class="section-heading-wrap text-center mb-5">
         <h2 class="heading-h2 text-center divider">
-          <span class="gsap-reveal"> Experience </span>
+          <span class="gsap-reveal">Experience</span>
         </h2>
         <span class="gsap-reveal">
           {{ partial "picture"  (dict
@@ -26,11 +26,16 @@
               <blockquote>{{ .note | markdownify }}</blockquote>
             </div>
             <div class="testimonial-author-info">
-              {{ partial "images/image" (dict
-                "Filename" (printf "%s?width=45" .img)
-                "Alt" .title
-                )
-              }}
+              {{ if .svg }}
+                <img alt="{{ .title }}" src="{{ .svg | relURL }}" width="90" height="90" loading="lazy" />
+              {{ else }}
+                {{ partial "picture"  (dict
+                  "ctx" $.ctx
+                  "src" (path.Join "assets" .img)
+                  "alt" .title
+                  )
+                }}
+              {{ end }}
               <h3>{{ .title }}</h3>
               <span class="d-block position">{{ .name }}, {{ .time }}</span>
             </div>
@@ -61,13 +66,17 @@
           <div id="{{ .id }}" class="col-md-6 col-lg-4 mb-4">
             <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
               <div class="wrap-icon mb-3">
-                {{ partial "picture"  (dict
-                  "ctx" $.ctx
-                  "src" (path.Join "assets" .img)
-                  "alt" .title
-                  "width" 45
-                  )
-                }}
+                {{ if .svg }}
+                  <img alt="{{ .title }}" src="{{ .svg | relURL }}" width="45" height="45" loading="lazy" />
+                {{ else }}
+                  {{ partial "picture"  (dict
+                    "ctx" $.ctx
+                    "src" (path.Join "assets" .img)
+                    "alt" .title
+                    "width" 45
+                    )
+                  }}
+                {{ end }}
               </div>
               <h3>{{ .title }}</h3>
               <br />

@@ -1,15 +1,14 @@
 +++
 title = "Gary Wei | ariseus - No Life is Enough"
 date = 2021-05-15
-lastmod = 2024-06-26
+lastmod = 2024-07-07
 description = "Gary Wei's Personal Website"
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
 
-# for open graph and twitter card
-og_image = "images/staticimage.jpg"
 draft = false
 
 [params]
+og_image = "images/staticimage.jpg"
 js = ["js/contact-form.js"]
 sections = [
   "cover",
@@ -19,6 +18,7 @@ sections = [
   "education",
   # "awards",
   "experience",
+  "volunteer",
   "skills",
   "contact",
 ]

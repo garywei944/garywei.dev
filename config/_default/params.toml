@@ -5,6 +5,8 @@ robots = "index, follow"
 use_google_analytics = true
 use_pirsch_analytics = true
 
+generate_date_on_footer = true
+
 [external_links]
 rel = "external noopener"
 target = "_blank"
