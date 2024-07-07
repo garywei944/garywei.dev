@@ -19,9 +19,8 @@
   <meta itemprop="wordCount" content="{{ . }}" />
 {{- end }}
 
-{{- $images := partial "_funcs/get-page-images" . }}
-{{- range first 6 $images }}
-  {{- with resources.Get .RelPermalink }}
+{{- if .Params.og_image }}
+  {{- with .Resources.Get .Params.og_image | default (resources.Get .Params.og_image) }}
     {{- with .Filter (images.Process "jpg q80") }}
       <meta itemprop="image" content="{{ .Permalink }}" />
     {{- end }}

@@ -7,6 +7,7 @@ keywords = ["unity", "game", "astronaut"]
 draft = false
 
 [params]
+og_image = "images/start.jpg"
 background = "images/start.jpg"
 subtitle = "My First Game"
 url = "projects/astronaut"
@@ -17,7 +18,6 @@ images = [
   "images/start.jpg",
   "images/on_air.jpg"
 ]
-
 +++
 
 {{< pfl-col >}}

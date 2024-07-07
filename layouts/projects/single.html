@@ -2,7 +2,7 @@
   <div
     class="cover-v1 gradient-bottom-black jarallax"
     style="
-    {{ with .Resources.Get .Params.background }}
+    {{ with .Resources.Get .Params.background | default (resources.Get .Params.background) }}
       {{ with .Filter (images.Process "webp") }}
         background-image: url('{{ .RelPermalink }}')
       {{ end }}

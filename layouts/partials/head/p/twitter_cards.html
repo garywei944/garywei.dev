@@ -1,6 +1,5 @@
-{{- $images := partial "_funcs/get-page-images" . }}
-{{- with index $images 0 }}
-  {{- with resources.Get .RelPermalink }}
+{{- if .Params.og_image }}
+  {{- with .Resources.Get .Params.og_image | default (resources.Get .Params.og_image) }}
     {{- with .Filter (images.Process "jpg q80") }}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="{{ .Permalink }}" />

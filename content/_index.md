@@ -6,11 +6,7 @@ description = "Gary Wei's Personal Website"
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
 
 # for open graph and twitter card
-audio = []
-images = ['/images/staticimage.jpg']
-series = []
-tags = []
-videos = []
+og_image = "images/staticimage.jpg"
 draft = false
 
 [params]

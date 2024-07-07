@@ -7,9 +7,8 @@ layout = "plain"
 draft = false
 
 [params]
-background = ""
+og_image = "images/projects/project_unihack21_reconnect.jpg"
 subtitle = "1st place winner of Unihack' 21"
-images = []
 +++
 
 {{< youtube 8RYjgz0gFDg >}}

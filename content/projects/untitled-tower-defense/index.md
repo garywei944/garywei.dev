@@ -7,6 +7,7 @@ keywords = ["unity", "game", "untitled-tower-defense"]
 draft = false
 
 [params]
+og_image = "images/level_1.jpg"
 background = "images/level_1.jpg"
 subtitle = "CS 590G Final Project"
 url = "projects/untitled-tower-defense"

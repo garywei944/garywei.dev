@@ -1,5 +1,14 @@
 {{ define "main" }}
-  <div class="cover-v1 gradient-bottom-black jarallax" style="background-image: url('{{ .Params.background | relURL }}')">
+  <div
+    class="cover-v1 gradient-bottom-black jarallax"
+    style="
+    {{ with .Resources.Get .Params.background | default (resources.Get .Params.background) }}
+      {{ with .Filter (images.Process "webp") }}
+        background-image: url('{{ .RelPermalink }}')
+      {{ end }}
+    {{ end }}
+"
+  >
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-10 mx-auto text-center">
