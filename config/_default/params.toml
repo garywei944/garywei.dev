@@ -3,6 +3,7 @@ author = "Gary Wei"
 robots = "index, follow"
 
 use_google_analytics = true
+use_cronitor_analytics = true
 use_pirsch_analytics = true
 
 generate_date_on_footer = true
