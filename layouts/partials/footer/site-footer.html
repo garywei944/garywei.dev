@@ -41,12 +41,15 @@
           Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>. Hosted on
           <a href="https://aws.amazon.com/cloudfront/" target="_blank">AWS Cloudfront</a>.
         </p>
-        {{ if site.Params.generate_date_on_footer }}
-          <p>Last updated on {{ time.Now | time.Format "January 02, 2006" }}</p>
-        {{ else }}
-          <p>Last updated on {{ site.Lastmod | time.Format "January 02, 2006" }}</p>
-        {{ end }}
-        .
+        <p>
+          {{ if site.Params.generate_date_on_footer }}
+            Last updated on
+            {{ time.Now | time.Format "January 02, 2006" }}.
+          {{ else }}
+            Last updated on
+            {{ site.Lastmod | time.Format "January 02, 2006" }}.
+          {{ end }}
+        </p>
       </div>
     </div>
   </div>
