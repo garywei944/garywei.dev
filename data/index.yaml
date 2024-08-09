@@ -191,11 +191,11 @@ experience:
     svg: "/images/svg/bytedance-seeklogo.svg"
     name: "ByteDance Inc."
     title: "Machine Learning Engineer"
-    time: "2024.07 - Present"
+    time: "2024.08 - Present"
     note: |
-      I will join ByteDance Inc. as a Machine Learning Engineer in July 2024.
+      I work as a Machine Learning Engineer at ByteDance Ltd. starting August 2024.
 
-      I will work on the TikTok Applied Machine Learning - Model Training Infrastructure team.
+      I work on the TikTok Applied Machine Learning Engine team.
   - id: "experience-relax-ml"
     img: "/images/avatar_cornell.png"
     name: "Cornell Relax ML Lab"
