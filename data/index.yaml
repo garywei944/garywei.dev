@@ -189,7 +189,7 @@ awards:
 experience:
   - id: "experience-bytedance"
     svg: "/images/svg/bytedance-seeklogo.svg"
-    name: "ByteDance Inc."
+    name: "ByteDance Ltd."
     title: "Machine Learning Engineer"
     time: "2024.08 - Present"
     note: |
