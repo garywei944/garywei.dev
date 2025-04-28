@@ -1,5 +1,5 @@
 +++
-title = "Gary Wei | ariseus - No Life is Enough"
+title = "Gary Wei | No Life is Enough"
 date = 2021-05-15
 lastmod = 2024-07-07
 description = "Gary Wei's Personal Website"

@@ -1,4 +1,5 @@
-background: "images/wlop/wlop (6)_wm.jpg"
+# background: "images/wlop/wlop (6)_wm.jpg"
+background: "images/LonelyCAT.png"
 slogan: "Machine Learning Researcher | Engineer | Hacker"
 resume: "https://s3.amazonaws.com/garywei.dev/Guanghao_Wei_Resume.pdf"
 
@@ -216,7 +217,7 @@ experience:
     note: |
       I worked at [**UMass BioNLP Lab**](https://bio-nlp.github.io/) on practical
       biomedical NLP projects directed by Prof.
-      [**Hong Yu**](https://www.uml.edu/sciences/computer-science/faculty/yu-hong.aspx).
+      [**Hong Yu**](https://www.uml.edu/research/chords/faculty/yu-hong.aspx).
 
       My responsibilities include: Information Retrieval, Data Processing,
       Model Implementation, Performance Analysis, and Application Product
@@ -228,7 +229,7 @@ volunteer:
     title: "Secretary General"
     time: "2022 - 2024"
     note: |
-      Cornell Chinese Students and Scholars Association.
+      [**Cornell Chinese Students and Scholars Association**](https://www.cornellcssa.org/).
       Joining Cornell CSSA is the most precious experience of my student life.
 
       Together we organized the Cornell Spring Festival Gala, Mid-Autumn
