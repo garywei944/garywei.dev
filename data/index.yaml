@@ -1,5 +1,5 @@
 background: "images/wlop/wlop (6)_wm.jpg"
-slogan: "Researcher | Engineer | Hacker | Gamer"
+slogan: "Machine Learning Researcher | Engineer | Hacker"
 resume: "https://s3.amazonaws.com/garywei.dev/Guanghao_Wei_Resume.pdf"
 
 logos:
@@ -214,7 +214,7 @@ experience:
     title: "Research Assistant"
     time: "May 2021 - June 2022"
     note: |
-      I worked at [**UMass BioNLP Lab**](https://bio-nlp.org/) on practical
+      I worked at [**UMass BioNLP Lab**](https://bio-nlp.github.io/) on practical
       biomedical NLP projects directed by Prof.
       [**Hong Yu**](https://www.uml.edu/sciences/computer-science/faculty/yu-hong.aspx).
 
