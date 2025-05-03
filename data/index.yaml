@@ -194,9 +194,11 @@ experience:
     title: "Machine Learning Engineer"
     time: "2024.08 - Present"
     note: |
-      I work as a Machine Learning Engineer at ByteDance Ltd. starting August 2024.
+      My work focuses on developing a large-scale distributed machine learning system
+      that are high-performance and fault-tolerant to network and hardware failures.
 
-      I work on the TikTok Applied Machine Learning Engine team.
+      ByteDance AML is committed to developing the next generation of high-performance
+      recommendation system training engines, supporting the unlimited growth of embeddings.
   - id: "experience-relax-ml"
     img: "/images/avatar_cornell.png"
     name: "Cornell Relax ML Lab"
