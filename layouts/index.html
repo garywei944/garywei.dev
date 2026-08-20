@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ $data := site.Data.index }}
+  {{ $data := hugo.Data.index }}
   {{ $ctx := dict "ctx" . "data" $data }}
   {{ range .Params.sections }}
     {{ partial (print "body/" . ".html") $ctx }}

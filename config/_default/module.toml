@@ -1,7 +1,7 @@
 [hugoVersion]
-extended = false
+extended = true
 max = ''
-min = '0.126.0'
+min = '0.165.0'
 
 [[imports]]
 path = 'github.com/hugomods/images'

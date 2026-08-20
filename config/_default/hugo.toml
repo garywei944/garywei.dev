@@ -1,5 +1,5 @@
 baseURL = 'https://www.garywei.dev/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = "Gary Wei's Website"
 
 copyright = ""

@@ -17,7 +17,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.127.0
+      HUGO_VERSION: 0.165.0
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
       - name: Build
-        run: hugo --gc --minify -e production
+        run: hugo --gc --minify -e production --panicOnWarning
 
       - name: Sync to s3
         uses: jakejarvis/s3-sync-action@master
