@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   padding: clamp(5rem, 8vw, 8rem) 0;
-  background: radial-gradient(circle at 20% 25%, rgba(19, 79, 64, 0.12), transparent 34%), #050908;
+  background: #000;
 }
 
 .academic-identity-heading {
@@ -34,14 +34,76 @@
   line-height: 1.65;
 }
 
+.academic-identity-reveal {
+  position: relative;
+  width: min(calc(100% - 4rem), 1320px);
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: normal;
+}
+
+.academic-identity-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  background: var(--identity-accent);
+  pointer-events: none;
+  transform: translateX(-102%);
+  will-change: transform;
+}
+
+.academic-identity-reveal.is-reveal-ready .academic-identity-frame {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.academic-identity-reveal.is-reveal-ready .academic-identity-cover {
+  display: block;
+}
+
+.academic-identity-reveal.is-revealing .academic-identity-frame {
+  animation: academic-identity-show 1ms linear 1s both;
+}
+
+.academic-identity-reveal.is-revealing .academic-identity-cover {
+  animation: academic-identity-wipe 2s cubic-bezier(0.86, 0, 0.07, 1) both;
+}
+
+@keyframes academic-identity-wipe {
+  0% {
+    transform: translateX(-102%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(102%);
+  }
+}
+
+@keyframes academic-identity-show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .academic-identity-frame {
   --identity-split: 58%;
   position: relative;
   isolation: isolate;
-  width: min(calc(100% - 4rem), 1320px);
+  width: 100%;
   height: min(68svh, 680px);
   min-height: 520px;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
   border: 1px solid rgba(242, 243, 239, 0.14);
   border-radius: 5px;
@@ -294,11 +356,14 @@
     font-size: 1rem;
   }
 
-  .academic-identity-frame {
+  .academic-identity-reveal {
     width: calc(100% - 2rem);
+    margin: 0 1rem;
+  }
+
+  .academic-identity-frame {
     height: min(64svh, 580px);
     min-height: 520px;
-    margin: 0 1rem;
     border-radius: 3px;
   }
 
@@ -398,5 +463,14 @@
     animation: none !important;
     transition-duration: 0.01ms !important;
     transition-delay: 0ms !important;
+  }
+
+  .academic-identity-reveal.is-reveal-ready .academic-identity-frame {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .academic-identity-cover {
+    display: none !important;
   }
 }

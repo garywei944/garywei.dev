@@ -10,67 +10,70 @@
   aria-labelledby="academic-profile-title"
 >
   <div class="academic-identity-heading">
-    <h2 id="academic-profile-title">Academic Profile</h2>
-    <p>Machine Learning Systems, High Performance Computing, and AI for Science</p>
+    <h2 id="academic-profile-title"><span class="gsap-reveal">Academic Profile</span></h2>
+    <p><span class="gsap-reveal">Machine Learning Systems, High Performance Computing, and AI for Science</span></p>
   </div>
 
-  <div class="academic-identity-frame" data-mobile-view="academic">
-    <div class="academic-identity-image academic-identity-personal" aria-hidden="true">
-      <picture>
-        <source media="(max-width: 767.98px)" srcset="{{ $personalMobile.RelPermalink }}" />
-        <img
-          src="{{ $personalDesktop.RelPermalink }}"
-          width="{{ $personalDesktop.Width }}"
-          height="{{ $personalDesktop.Height }}"
-          alt=""
-          draggable="false"
-        />
-      </picture>
-    </div>
-    <div class="academic-identity-image academic-identity-academic" aria-hidden="true">
-      <picture>
-        <source media="(max-width: 767.98px)" srcset="{{ $academicMobile.RelPermalink }}" />
-        <img
-          src="{{ $academicDesktop.RelPermalink }}"
-          width="{{ $academicDesktop.Width }}"
-          height="{{ $academicDesktop.Height }}"
-          alt=""
-          draggable="false"
-        />
-      </picture>
-    </div>
-    <div class="academic-identity-scrim" aria-hidden="true"></div>
-    <div class="academic-identity-divider" aria-hidden="true"><span></span></div>
-
-    <header class="academic-identity-topline">
-      <p class="academic-identity-labels" aria-hidden="true"><span>Personal</span><span>/</span><span>Academic</span></p>
-      <div class="academic-identity-mobile-switch" role="group" aria-label="Choose identity view">
-        <button type="button" data-view="personal" aria-pressed="false">Personal</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-view="academic" aria-pressed="true">Academic</button>
+  <div class="academic-identity-reveal">
+    <div class="academic-identity-frame" data-mobile-view="academic">
+      <div class="academic-identity-image academic-identity-personal" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="{{ $personalMobile.RelPermalink }}" />
+          <img
+            src="{{ $personalDesktop.RelPermalink }}"
+            width="{{ $personalDesktop.Width }}"
+            height="{{ $personalDesktop.Height }}"
+            alt=""
+            draggable="false"
+          />
+        </picture>
       </div>
-    </header>
+      <div class="academic-identity-image academic-identity-academic" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="{{ $academicMobile.RelPermalink }}" />
+          <img
+            src="{{ $academicDesktop.RelPermalink }}"
+            width="{{ $academicDesktop.Width }}"
+            height="{{ $academicDesktop.Height }}"
+            alt=""
+            draggable="false"
+          />
+        </picture>
+      </div>
+      <div class="academic-identity-scrim" aria-hidden="true"></div>
+      <div class="academic-identity-divider" aria-hidden="true"><span></span></div>
 
-    <label class="academic-identity-sr-only" for="academic-identity-range">Move the divider between personal and academic views</label>
-    <input
-      class="academic-identity-range"
-      id="academic-identity-range"
-      type="range"
-      min="0"
-      max="100"
-      value="58"
-      step="1"
-      aria-orientation="horizontal"
-      aria-describedby="academic-identity-instructions"
-      aria-valuetext="Personal view 58 percent, academic view 42 percent"
-    />
-    <span class="academic-identity-sr-only" id="academic-identity-instructions">Use the Left Arrow and Right Arrow keys to move the boundary.</span>
+      <header class="academic-identity-topline">
+        <p class="academic-identity-labels" aria-hidden="true"><span>Personal</span><span>/</span><span>Academic</span></p>
+        <div class="academic-identity-mobile-switch" role="group" aria-label="Choose identity view">
+          <button type="button" data-view="personal" aria-pressed="false">Personal</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-view="academic" aria-pressed="true">Academic</button>
+        </div>
+      </header>
 
-    <div class="academic-identity-content">
-      <h3>Gary Wei</h3>
-      <p>Researcher and engineer</p>
-      <a href="https://acad.garywei.dev/">Enter academic profile</a>
+      <label class="academic-identity-sr-only" for="academic-identity-range">Move the divider between personal and academic views</label>
+      <input
+        class="academic-identity-range"
+        id="academic-identity-range"
+        type="range"
+        min="0"
+        max="100"
+        value="58"
+        step="1"
+        aria-orientation="horizontal"
+        aria-describedby="academic-identity-instructions"
+        aria-valuetext="Personal view 58 percent, academic view 42 percent"
+      />
+      <span class="academic-identity-sr-only" id="academic-identity-instructions">Use the Left Arrow and Right Arrow keys to move the boundary.</span>
+
+      <div class="academic-identity-content">
+        <h3>Gary Wei</h3>
+        <p>Researcher and engineer</p>
+        <a href="https://acad.garywei.dev/">Enter academic profile</a>
+      </div>
+      <p class="academic-identity-sr-only">This section compares Gary Wei's personal site artwork with a preview of his academic profile.</p>
     </div>
-    <p class="academic-identity-sr-only">This section compares Gary Wei's personal site artwork with a preview of his academic profile.</p>
+    <span class="academic-identity-cover" aria-hidden="true"></span>
   </div>
 </section>
