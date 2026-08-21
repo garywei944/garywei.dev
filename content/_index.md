@@ -9,10 +9,12 @@ draft = false
 
 [params]
 og_image = "images/staticimage.jpg"
-js = ["js/contact-form.js"]
+css = ["css/academic-profile.css"]
+js = ["js/contact-form.js", "js/academic-profile.js"]
 sections = [
   "cover",
   "about",
+  "academic-profile",
   "projects",
   # "blogs",
   "experience",
