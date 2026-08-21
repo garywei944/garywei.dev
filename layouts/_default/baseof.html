@@ -3,7 +3,21 @@
   <head>
     {{ partialCached "head/prerender.html" . }}
     {{ partial "head/metadata.html" . }}
+    <script>
+      document.documentElement.classList.add('hero-reveal-pending');
+    </script>
     {{ partial "head/styles.html" . }}
+    <noscript
+      ><style>
+        #unslate_co--overlayer,
+        .site-loader-wrap {
+          display: none !important;
+        }
+        .gsap-reveal-hero {
+          line-height: 1.2 !important;
+        }
+      </style></noscript
+    >
     {{ partialCached "head/analytics.html" . }}
     <title>{{ .Title }}</title>
   </head>
@@ -38,6 +52,32 @@
     <div class="site-loader-wrap">
       <div class="site-loader"></div>
     </div>
+    <script>
+      (function () {
+        function hideSiteLoader() {
+          var overlayer = document.getElementById('unslate_co--overlayer');
+          var loader = document.querySelector('.site-loader-wrap');
+          if (overlayer) overlayer.style.display = 'none';
+          if (loader) loader.style.display = 'none';
+        }
+        function showHeroFallback() {
+          document.documentElement.classList.remove('hero-reveal-pending');
+          document.querySelectorAll('.gsap-reveal-hero').forEach(function (hero) {
+            hero.style.visibility = 'visible';
+            if (!hero.querySelector('.reveal-content')) hero.style.lineHeight = '1.2';
+          });
+          document.querySelectorAll('.gsap-reveal-hero .reveal-content').forEach(function (content) {
+            content.classList.remove('reveal-content-pending');
+          });
+          document.querySelectorAll('.gsap-reveal-hero .cover').forEach(function (cover) {
+            cover.style.display = 'none';
+          });
+        }
+        window.addEventListener('load', hideSiteLoader, { once: true });
+        window.setTimeout(hideSiteLoader, 3000);
+        window.setTimeout(showHeroFallback, 3500);
+      })();
+    </script>
     {{ partial "footer/scripts.html" . }}
   </body>
 </html>

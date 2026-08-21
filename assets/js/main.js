@@ -16,9 +16,7 @@ jQuery(function ($) {
   owlCarouselPlugin();
   floatingLabel();
   scrollWindow();
-  counter();
   jarallaxPlugin();
-  stickyFillPlugin();
   animateReveal();
 });
 
@@ -306,33 +304,6 @@ var scrollWindow = function () {
   });
 };
 
-var counter = function () {
-  $('.section-counter').waypoint(
-    function (direction) {
-      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-        $(this.element)
-          .find('.number-counter')
-          .each(function () {
-            var $this = $(this),
-              num = $this.data('number');
-            $this.animateNumber(
-              {
-                number: num,
-                numberStep: comma_separator_number_step,
-              },
-              {
-                easing: 'swing',
-                duration: 3000,
-              }
-            );
-          });
-      }
-    },
-    { offset: '95%' }
-  );
-};
-
 var mobileToggleClick = function () {
   $('.js-menu-toggle').click(function (e) {
     e.preventDefault();
@@ -503,17 +474,6 @@ var jarallaxPlugin = function () {
   $('.jarallax').jarallax({
     speed: 0.2,
   });
-  jarallax(document.querySelectorAll('.jarallax-video'), {
-    speed: 0.2,
-    videoSrc: 'https://www.youtube.com/watch?v=mwtbEGNABWU',
-    videoStartTime: 8,
-    videoEndTime: 70,
-  });
-};
-
-var stickyFillPlugin = function () {
-  var elements = document.querySelectorAll('.unslate_co--sticky');
-  Stickyfill.add(elements);
 };
 
 var animateReveal = function () {
@@ -555,36 +515,31 @@ var animateReveal = function () {
     $(this).html('<span class="reveal-wrap"><span class="cover"></span><span class="reveal-content">' + html + '</span></span>');
   });
   var grevealhero = $('.gsap-reveal-hero');
+  var shouldRevealHero = document.documentElement.classList.contains('hero-reveal-pending');
 
-  if (grevealhero.length) {
-    var heroNum = 0;
+  if (grevealhero.length && shouldRevealHero) {
     grevealhero.each(function () {
-      var cover = $(this).find('.cover'),
+      var hero = this,
+        cover = $(this).find('.cover'),
         revealContent = $(this).find('.reveal-content');
 
+      revealContent.addClass('reveal-content-pending');
+      TweenMax.set(hero, { visibility: 'visible' });
       var tl2 = new TimelineMax();
-
-      setTimeout(function () {
-        tl2.to(cover, 1, {
-          marginLeft: '0',
-          ease: Expo.easeInOut,
-          onComplete() {
-            tl2.set(revealContent, { x: 0 });
-            tl2.to(cover, 1, { marginLeft: '102%', ease: Expo.easeInOut });
-          },
-        });
-      }, heroNum * 0);
-
-      var scene = new ScrollMagic.Scene({
-        triggerElement: this,
-        duration: '0%',
-        reverse: false,
-        offset: '-300%',
-      })
-        .setTween(tl2)
-        .addTo(controller);
-
-      heroNum++;
+      tl2.to(cover, 1, {
+        marginLeft: '0',
+        ease: Expo.easeInOut,
+        onComplete() {
+          revealContent.removeClass('reveal-content-pending');
+          tl2.to(cover, 1, {
+            marginLeft: '102%',
+            ease: Expo.easeInOut,
+            onComplete() {
+              document.documentElement.classList.remove('hero-reveal-pending');
+            },
+          });
+        },
+      });
     });
   }
 };

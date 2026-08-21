@@ -2208,6 +2208,10 @@ span.error {
   line-height: 0;
 }
 
+.hero-reveal-pending .gsap-reveal-hero {
+  visibility: hidden;
+}
+
 .gsap-reveal-hero .reveal-wrap {
   position: relative;
   overflow: hidden;
@@ -2229,9 +2233,20 @@ span.error {
   line-height: 1.5;
   z-index: 1;
   display: inline-block;
+}
+
+.gsap-reveal-hero .reveal-wrap .reveal-content.reveal-content-pending {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+}
+
+@media (max-width: 767.98px) {
+  .gsap-reveal-hero .reveal-wrap,
+  .gsap-reveal-hero .reveal-wrap .reveal-content {
+    display: block;
+    width: 100%;
+  }
 }
 
 .gsap-reveal-img {

@@ -104,7 +104,7 @@ Additional contracts:
 
 ## Frontend runtime and coupling
 
-`assets/js/main.js` is legacy jQuery code adapted from Unfold. It assumes globals loaded in footer order, including Bootstrap/Popper, Owl Carousel, AOS, Isotope, imagesLoaded, animateNumber/Waypoints, GSAP 2, ScrollMagic, jarallax, Stickyfill, and related plugins. `assets/css/style.css` contains both active styles and retained template-era selectors.
+`assets/js/main.js` is legacy jQuery code adapted from Unfold. It assumes globals loaded in footer order, including Bootstrap/Popper, Owl Carousel, AOS, Isotope, imagesLoaded, GSAP 2, ScrollMagic, jarallax, and related plugins. `assets/css/style.css` contains both active styles and retained template-era selectors.
 
 Important DOM contracts:
 
@@ -112,15 +112,14 @@ Important DOM contracts:
 - Relative project links receive `ajax-load-page`. `main.js` fetches the target and extracts `.portfolio-single-wrap`; internal project layouts must keep that wrapper or opt out of AJAX deliberately.
 - The home page appends `assets/js/contact-form.js` through `[params].js`. It expects both `#contactForm` and the contact section, and it submits to an external Formspree endpoint. Preview tests must not send a real message.
 - `[params].css` and `[params].js` append page-specific pipeline assets. Hugo minifies and fingerprints local CSS/JS; `hugo.IsServer`, not the environment name, controls whether SRI attributes are emitted.
-- Several apparently unused plugins remain hard runtime dependencies because `main.js` initializes plugin methods unconditionally. Remove a CDN dependency only after removing or guarding all calls.
-- The full-page loader is hidden by JavaScript. A failure early in the CDN/local script chain can leave the entire page covered.
+- Plugin globals used by `main.js` remain hard runtime dependencies unless each initialization is removed or guarded. Remove a CDN dependency only after tracing all calls.
+- The full-page loader has dependency-independent native load/timeout fallback and a no-JavaScript CSS fallback in `baseof.html`; preserve both when changing script loading.
 - CDN upgrades require compatible URLs, integrity hashes, load order, data attributes, and regression checks. Updating only a URL is incomplete.
 
 ## Known sharp edges
 
 Do not fix these incidentally, but do not mistake them for intended guarantees:
 
-- `assets/js/contact-form.js` treats HTTP error responses as success, references an undefined `$submit` in its rejection path, and assumes the form always exists.
 - `layouts/projects/single.html` uses a literal `"Jan 2nd, 2006"`, so most rendered ordinal suffixes are wrong.
 - `layouts/partials/head/p/schema.html` is the active itemprop partial. The similarly named `layouts/partials/head/schema.html` is unreferenced legacy code and references incompatible/missing parameter names.
 - Development configuration still enables Google Analytics, Cronitor, and Pirsch with placeholder IDs.
