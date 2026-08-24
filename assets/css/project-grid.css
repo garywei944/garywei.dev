@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+  #portfolio-section .project-wide .portfolio-item {
+    aspect-ratio: 12 / 7;
+    background: #000;
+  }
+
+  #portfolio-section .project-wide .reveal-wrap,
+  #portfolio-section .project-wide .reveal-content,
+  #portfolio-section .project-wide picture {
+    height: 100%;
+    background: #000;
+  }
+
+  #portfolio-section .project-wide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

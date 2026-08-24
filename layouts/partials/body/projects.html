@@ -19,7 +19,7 @@
             <a data-filter=".ai" href="#">AI</a>
             <a data-filter=".os" href="#">OS</a>
             <a data-filter=".web" href="#">Web</a>
-            <!-- <a data-filter=".iot" href="#">IoT</a> -->
+            <a data-filter=".security" href="#">Security</a>
             <a data-filter=".game" href="#">Game</a>
             <a data-filter=".other" href="#">Other</a>
           </div>
@@ -28,6 +28,10 @@
       <div id="posts" class="row gutter-isotope-item">
         {{ range $i, $e := .data.projects }}
           {{- $u := urls.Parse $e.link -}}
+          {{- $imageWidth := 800 -}}
+          {{- if in $e.class "col-lg-8" -}}
+            {{- $imageWidth = 1600 -}}
+          {{- end -}}
           <div class="item {{ $e.class }} col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
             <a
               href="{{ $u }}"
@@ -50,7 +54,7 @@
                     "src" $e.img
                     "ctx" .
                     "alt" $e.title
-                    "width" 800
+                    "width" $imageWidth
                     "loading" "auto"
                     )
                   }}
@@ -60,7 +64,7 @@
                   "src" $e.img
                   "ctx" $.ctx
                   "alt" $e.title
-                  "width" 800
+                  "width" $imageWidth
                   "loading" "auto"
                   )
                 }}

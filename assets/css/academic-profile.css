@@ -26,6 +26,12 @@
   letter-spacing: -0.065em;
 }
 
+@media (min-width: 768px) {
+  .academic-identity-heading h2 .gsap-reveal {
+    padding-right: 0.08em;
+  }
+}
+
 .academic-identity-heading p {
   max-width: 39rem;
   margin: 0;

@@ -110,7 +110,7 @@ Important DOM contracts:
 
 - Navigation, mobile-menu cloning, scroll state, GSAP reveal classes, Isotope filters, carousels, loaders, and form states are coupled across templates, `main.js`, and `style.css`. Trace all three before renaming a class or ID.
 - Relative project links receive `ajax-load-page`. `main.js` fetches the target and extracts `.portfolio-single-wrap`; internal project layouts must keep that wrapper or opt out of AJAX deliberately.
-- The home page appends `assets/js/contact-form.js` through `[params].js`. It expects both `#contactForm` and the contact section, and it submits to an external Formspree endpoint. Preview tests must not send a real message.
+- The contact section pairs `assets/images/contact_bg.jpg` with direct email/profile links. The old Formspree markup remains in a non-rendered Hugo comment, and the retained `assets/js/contact-form.js` is no longer loaded.
 - `[params].css` and `[params].js` append page-specific pipeline assets. Hugo minifies and fingerprints local CSS/JS; `hugo.IsServer`, not the environment name, controls whether SRI attributes are emitted.
 - Plugin globals used by `main.js` remain hard runtime dependencies unless each initialization is removed or guarded. Remove a CDN dependency only after tracing all calls.
 - The full-page loader has dependency-independent native load/timeout fallback and a no-JavaScript CSS fallback in `baseof.html`; preserve both when changing script loading.

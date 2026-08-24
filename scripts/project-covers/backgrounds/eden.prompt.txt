@@ -1,0 +1,11 @@
+Create a 16:9 project-cover background for Eden, a one-click Unix
+development-environment initialization tool. Use a dark cinematic personal
+portfolio aesthetic: an organic emerald garden or forest fused subtly with a
+technical terminal atmosphere, suggesting many Unix machines converging into
+one calm development environment. Put the visual focal point on the right half
+and preserve clean dark negative space on the left for a title overlay. Use
+true black, deep forest green, muted jade, soft mint light, and at most one
+restrained deep-rose accent matching #d63447. Render sophisticated painterly
+digital art, crisp enough for a 1280x720 card. Include no text, letters, logos,
+Ubuntu mark, screenshots, fake UI, generic neon grid, purple, cyan-magenta
+gradient, or floating geometric shapes.

@@ -1,0 +1,56 @@
+<section class="unslate_co--section resume-section" id="{{ .id }}" aria-labelledby="{{ .id }}-title">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider" id="{{ .id }}-title">
+        <span class="gsap-reveal">{{ .title }}</span>
+      </h2>
+      <span class="gsap-reveal" aria-hidden="true">
+        {{ partial "picture"  (dict
+          "ctx" .ctx
+          "src" "assets/images/divider.png"
+          "alt" "Section divider"
+          "width" 76
+          )
+        }}
+      </span>
+    </div>
+
+    <ul class="resume-list list-unstyled" data-aos="fade-up">
+      {{ range $item := .items }}
+        <li
+          {{ with $item.id }}id="{{ . }}"{{ end }}
+          class="resume-entry media"
+        >
+          <div class="resume-entry-marker mr-3 mr-md-4" aria-hidden="true">
+            {{ if $item.svg }}
+              <img alt="{{ $item.name }} logo" src="{{ $item.svg | relURL }}" width="42" height="42" loading="lazy" />
+            {{ else }}
+              {{ partial "picture"  (dict
+                "ctx" $.ctx
+                "src" (path.Join "assets" $item.img)
+                "alt" (printf "%s logo" $item.name)
+                "width" 42
+                )
+              }}
+            {{ end }}
+          </div>
+
+          <div class="resume-entry-body media-body">
+            <div class="resume-entry-heading d-md-flex justify-content-between align-items-baseline">
+              <div>
+                <h3>{{ $item.name }}</h3>
+                <div class="resume-entry-title">{{ $item.title | markdownify }}</div>
+              </div>
+              {{ with $item.time }}
+                <p class="resume-entry-time ml-md-4">{{ . }}</p>
+              {{ end }}
+            </div>
+            {{ with $item.note }}
+              <div class="resume-entry-note">{{ . | markdownify }}</div>
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+{
+  "covers": {
+    "cd2root": {
+      "title": "cd2root",
+      "description": "Easily change the working directory to the Project Root.",
+      "background_start": "#ccff66",
+      "background_end": "#ffffcc",
+      "output": "assets/images/projects/project_cd2root.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 0,
+      "title_color": "#101014"
+    },
+    "chemflow": {
+      "title": "ChemFlow",
+      "description": "NeurIPS 2024",
+      "background_start": "#66ffcc",
+      "background_end": "#ccffff",
+      "artwork": {
+        "path": "sources/chemflow.png",
+        "box": [720, 100, 500, 520],
+        "fit": "contain",
+        "background": "#ffffff",
+        "radius": 20,
+        "border": "#66ccff"
+      },
+      "output": "assets/images/projects/project_chemflow.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 0,
+      "title_color": "#101014"
+    },
+    "eden": {
+      "title": "Eden",
+      "description": "One-click initialization for Unix-like systems",
+      "description_width": 560,
+      "background": "backgrounds/eden.jpg",
+      "output": "assets/images/projects/project_eden.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 205,
+      "title_color": "#f2f3ef"
+    },
+    "evakit": {
+      "title": "evakit",
+      "description": "A collection of utilities for the EVA project.",
+      "background_start": "#cc66ff",
+      "background_end": "#ffccff",
+      "output": "assets/images/projects/project_evakit.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 0,
+      "title_color": "#101014"
+    },
+    "grab-sampler": {
+      "title": "GraB Sampler",
+      "description": "PyTorch-based sampler that supports optimal data ordering for training.",
+      "background_start": "#66ccff",
+      "background_end": "#ccffff",
+      "output": "assets/images/projects/project_grab_sampler.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 0,
+      "title_color": "#101014"
+    },
+    "kpconv": {
+      "title": "KPConv",
+      "background": "sources/kpconv.png",
+      "output": "assets/images/projects/project_kpconv.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 220,
+      "title_color": "#f2f3ef"
+    },
+    "umass-ctf-2022": {
+      "title": "UMass CTF '22",
+      "description": "Team Hide on bush",
+      "background_start": "#ff6666",
+      "background_end": "#ffcc66",
+      "output": "assets/images/projects/project_umass_ctf_2022.jpg",
+      "size": [1280, 720],
+      "left": 76,
+      "scrim": 0,
+      "title_color": "#101014"
+    }
+  }
+}

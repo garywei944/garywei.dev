@@ -1,0 +1,133 @@
+.resume-list {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.resume-list::before {
+  position: absolute;
+  top: 1.8rem;
+  bottom: 1.8rem;
+  left: 29px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(214, 52, 71, 0.68) 8%, rgba(242, 243, 239, 0.16) 92%, transparent);
+  content: '';
+}
+
+.resume-entry {
+  position: relative;
+  align-items: flex-start;
+  padding-bottom: clamp(3.5rem, 6vw, 5rem);
+  scroll-margin-top: 6rem;
+}
+
+.resume-entry:last-child {
+  padding-bottom: 0;
+}
+
+.resume-entry-marker {
+  z-index: 1;
+  display: flex;
+  flex: 0 0 58px;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(242, 243, 239, 0.2);
+  border-radius: 50%;
+  background: #070b0a;
+  box-shadow: 0 0 0 8px #000;
+}
+
+.resume-entry-marker picture,
+.resume-entry-marker img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.resume-entry-body {
+  min-width: 0;
+  max-width: 52rem;
+  padding-top: 0.15rem;
+}
+
+.resume-entry-heading {
+  gap: 1rem;
+}
+
+.resume-entry-body h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.resume-entry-title,
+.resume-entry-title p {
+  margin: 0.45rem 0 0;
+  color: #d63447;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.resume-entry-time {
+  flex: 0 0 auto;
+  margin: 0;
+  color: rgba(242, 243, 239, 0.58);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.resume-entry-note {
+  max-width: 44rem;
+  margin-top: 1rem;
+  color: rgba(242, 243, 239, 0.72);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.resume-entry-note p {
+  margin-bottom: 0.75rem;
+}
+
+.resume-entry-note p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .resume-list::before {
+    top: 1.6rem;
+    bottom: 1.6rem;
+    left: 26px;
+  }
+
+  .resume-entry {
+    padding-bottom: 3.75rem;
+  }
+
+  .resume-entry-marker {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .resume-entry-marker picture,
+  .resume-entry-marker img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .resume-entry-body h3 {
+    font-size: 1.45rem;
+  }
+
+  .resume-entry-time {
+    margin-top: 0.6rem;
+  }
+}

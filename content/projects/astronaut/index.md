@@ -2,7 +2,7 @@
 title = 'Astronaut'
 date = 2020-09-07
 lastmod = 2024-06-12
-description = "Unity Game - Astronaut"
+description = "A small Unity game and Gary Wei's first game project."
 keywords = ["unity", "game", "astronaut"]
 draft = false
 
@@ -24,9 +24,9 @@ images = [
 
 ##### Project Description
 
-The player should reach a "finish zone" by controlling a character.
+Guide the character to the finish zone.
 
-There is no win or loss condition in this game, only a completed condition (the player enters the "finish zone").
+The game has no conventional win or loss condition; completing it simply means reaching the finish zone.
 
 _Made with Unity._
 
@@ -36,11 +36,9 @@ _Made with Unity._
 
 ##### Instructions
 
-{{< deeppink >}}"W"{{< /deeppink >}} and
-{{< deeppink >}}"S"{{< /deeppink >}} to go forward or back  
-{{< deeppink >}}"A"{{< /deeppink >}} and
-{{< deeppink >}}"D"{{< /deeppink >}} to turn around  
-{{< deeppink >}}"Space"{{< /deeppink >}} to jump
+- {{< deeppink >}}W{{< /deeppink >}} / {{< deeppink >}}S{{< /deeppink >}}: move forward or backward
+- {{< deeppink >}}A{{< /deeppink >}} / {{< deeppink >}}D{{< /deeppink >}}: turn
+- {{< deeppink >}}Space{{< /deeppink >}}: jump
 
 ##### Download
 
@@ -48,14 +46,14 @@ _Made with Unity._
 <input
   type="submit"
   class="btn btn-outline-pill btn-custom-light mr-3"
-  value="Windows 64 bit"
+  value="Windows (64-bit)"
 />
 </a>
 <a href="https://s3.amazonaws.com/ariseus.net/cs590g_p1/aris_cs590g_p1_1.1.0_mac.zip">
 <input
   type="submit"
   class="btn btn-outline-pill btn-custom-light mr-3"
-  value="Mac"
+  value="macOS"
 />
 </a>
 

@@ -33,9 +33,11 @@
 
         <p></p>
 
-        <p class="lead gsap-reveal">
-          <a class="btn btn-outline-pill btn-custom-light" href="{{ .data.resume }}" target="_blank">Download Resume</a>
-        </p>
+        {{ with .data.resume }}
+          <p class="lead gsap-reveal">
+            <a class="btn btn-outline-pill btn-custom-light" href="{{ . }}" rel="external noopener" target="_blank">Download Resume</a>
+          </p>
+        {{ end }}
       </div>
     </div>
   </div>

@@ -1,16 +1,16 @@
 +++
 title = "Gary Wei | No Life is Enough"
 date = 2021-05-15
-lastmod = 2024-07-07
-description = "Gary Wei's Personal Website"
+lastmod = 2026-08-23
+description = "Gary Wei is a machine learning engineer and researcher who builds efficient, reliable systems for large-scale learning."
 keywords = ["Gary Wei", "ariseus", "Guanghao", "garywei944"]
 
 draft = false
 
 [params]
 og_image = "images/staticimage.jpg"
-css = ["css/academic-profile.css"]
-js = ["js/contact-form.js", "js/academic-profile.js"]
+css = ["css/academic-profile.css", "css/project-grid.css", "css/resume-list.css"]
+js = ["js/academic-profile.js"]
 sections = [
   "cover",
   "about",
@@ -24,19 +24,20 @@ sections = [
   "skills",
   "contact",
 ]
-slider_experience = false
-
 [params.image]
 figure_class = 'dotted-bg gsap-reveal-img'
 +++
 
-I always depict myself as a combination of a researcher and an engineer.
-I work on Machine Learning, Full Stack Web, Game Development, Cyber-security, etc.
-{.lead .gsap-reveal}
+I am a machine learning engineer and researcher who builds efficient, reliable systems for large-scale learning.
+My interests span machine learning systems, distributed systems, high-performance computing, and AI for science.
+{.gsap-reveal}
 
-I finished my M.Eng. study in Computer Science at [**Cornell University**](https://www.cornell.edu/).
-I received Dual B.S. degrees in Math and Computer Science and Minor in Japanese at [**UMass Amherst**](https://www.umass.edu/).
+I earned an M.Eng. in Computer Science from [**Cornell University**](https://www.cornell.edu/) and dual B.S. degrees in
+Computer Science and Mathematics from [**UMass Amherst**](https://www.umass.edu/), where I also minored in Japanese.
 {.mb-4 .gsap-reveal}
 
-My vision is to do something noble, and I'm still on the road to learning.
+Outside work, I enjoy building open-source tools, solving CTF challenges, making games, and playing soccer.
+{.gsap-reveal}
+
+My ambition is to build something that genuinely matters. I am still learning—and still on my way.
 {.gsap-reveal}

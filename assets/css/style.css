@@ -860,6 +860,9 @@ a:hover {
   font-size: 5rem;
   font-weight: 900;
   color: #fff;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.55);
 }
 
 @media (max-width: 991.98px) {
@@ -887,6 +890,9 @@ a:hover {
 .cover-v1 .subheading {
   font-size: 33px;
   color: #fff;
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.9),
+    0 0 14px rgba(0, 0, 0, 0.65);
 }
 
 @media (max-width: 991.98px) {
