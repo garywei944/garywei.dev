@@ -53,6 +53,11 @@ projects:
     note: 'Cross-platform dotfiles · Since 2020'
     # img: "assets/images/projects/arch_neofetch_v3.jpg"
     img: 'assets/images/projects/cachyos.webp'
+  - class: 'os'
+    link: 'https://github.com/garywei944/dms-wallpaper-engine-control'
+    title: 'Wallpaper Engine Control'
+    note: 'DankMaterialShell widget · Hyprland · 2026'
+    img: 'assets/images/projects/wallpaper_engine_control.webp'
 
   - class: 'security'
     link: 'https://github.com/garywei944/umass_ctf_2022'
